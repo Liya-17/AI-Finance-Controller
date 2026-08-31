@@ -62,8 +62,12 @@ class AuditEntry:
     matched_bank_id: Optional[str]
     confidence: float
     rationale: str
-    provider: str = "n/a"          # "n/a" for Tier 1/2 (no LLM involved), else e.g. "google_gemini"
-    model: str = "n/a"
+    # "deterministic (no LLM)" for Tier 1/2 - deliberately NOT "n/a"/"N/A"/
+    # "NA": those are in pandas' default na_values list, so pd.read_csv()
+    # silently turns them into NaN, which the dashboard then rendered as a
+    # bare "None" - a real bug, not a display nit. See Phase 2 dashboard fixes.
+    provider: str = "deterministic (no LLM)"
+    model: str = "deterministic (no LLM)"
     timestamp: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
 
     def __post_init__(self):

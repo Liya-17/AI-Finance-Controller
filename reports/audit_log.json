@@ -7,9 +7,9 @@
     "matched_bank_id": "BNK000115",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.239819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000105",
@@ -19,9 +19,9 @@
     "matched_bank_id": "BNK000106",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.239819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000110",
@@ -31,9 +31,9 @@
     "matched_bank_id": "BNK000111",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.239819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000115",
@@ -43,9 +43,9 @@
     "matched_bank_id": "BNK000116",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.239819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000027",
@@ -55,9 +55,9 @@
     "matched_bank_id": "BNK000028",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.239819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000090",
@@ -67,9 +67,9 @@
     "matched_bank_id": "BNK000091",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.239819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000099",
@@ -79,9 +79,9 @@
     "matched_bank_id": "BNK000100",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.239819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000123",
@@ -91,9 +91,9 @@
     "matched_bank_id": "BNK000124",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000064",
@@ -103,9 +103,9 @@
     "matched_bank_id": "BNK000065",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000015",
@@ -115,9 +115,9 @@
     "matched_bank_id": "BNK000016",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000004",
@@ -127,9 +127,9 @@
     "matched_bank_id": "BNK000004",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000033",
@@ -139,9 +139,9 @@
     "matched_bank_id": "BNK000034",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000104",
@@ -151,9 +151,9 @@
     "matched_bank_id": "BNK000105",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000093",
@@ -163,9 +163,9 @@
     "matched_bank_id": "BNK000094",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000046",
@@ -175,9 +175,9 @@
     "matched_bank_id": "BNK000047",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000019",
@@ -187,9 +187,9 @@
     "matched_bank_id": "BNK000020",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000102",
@@ -199,9 +199,9 @@
     "matched_bank_id": "BNK000103",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000008",
@@ -211,9 +211,9 @@
     "matched_bank_id": "BNK000008",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000129",
@@ -223,9 +223,9 @@
     "matched_bank_id": "BNK000129",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000043",
@@ -235,9 +235,9 @@
     "matched_bank_id": "BNK000044",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000012",
@@ -247,9 +247,9 @@
     "matched_bank_id": "BNK000013",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000109",
@@ -259,9 +259,9 @@
     "matched_bank_id": "BNK000110",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000051",
@@ -271,9 +271,9 @@
     "matched_bank_id": "BNK000052",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000083",
@@ -283,9 +283,9 @@
     "matched_bank_id": "BNK000084",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000100",
@@ -295,9 +295,9 @@
     "matched_bank_id": "BNK000101",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000053",
@@ -307,9 +307,9 @@
     "matched_bank_id": "BNK000054",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000120",
@@ -319,9 +319,9 @@
     "matched_bank_id": "BNK000121",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000077",
@@ -331,9 +331,9 @@
     "matched_bank_id": "BNK000078",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000107",
@@ -343,9 +343,9 @@
     "matched_bank_id": "BNK000108",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000092",
@@ -355,9 +355,9 @@
     "matched_bank_id": "BNK000093",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000035",
@@ -367,9 +367,9 @@
     "matched_bank_id": "BNK000036",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000050",
@@ -379,9 +379,9 @@
     "matched_bank_id": "BNK000051",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000013",
@@ -391,9 +391,9 @@
     "matched_bank_id": "BNK000014",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000049",
@@ -403,9 +403,9 @@
     "matched_bank_id": "BNK000050",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000131",
@@ -415,9 +415,9 @@
     "matched_bank_id": "BNK000131",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000054",
@@ -427,9 +427,9 @@
     "matched_bank_id": "BNK000055",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000038",
@@ -439,9 +439,9 @@
     "matched_bank_id": "BNK000039",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000044",
@@ -451,9 +451,9 @@
     "matched_bank_id": "BNK000045",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000139",
@@ -463,9 +463,9 @@
     "matched_bank_id": "BNK000136",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000020",
@@ -475,9 +475,9 @@
     "matched_bank_id": "BNK000021",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000069",
@@ -487,9 +487,9 @@
     "matched_bank_id": "BNK000070",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000086",
@@ -499,9 +499,9 @@
     "matched_bank_id": "BNK000087",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000036",
@@ -511,9 +511,9 @@
     "matched_bank_id": "BNK000037",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000098",
@@ -523,9 +523,9 @@
     "matched_bank_id": "BNK000099",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000085",
@@ -535,9 +535,9 @@
     "matched_bank_id": "BNK000086",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000032",
@@ -547,9 +547,9 @@
     "matched_bank_id": "BNK000033",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000063",
@@ -559,9 +559,9 @@
     "matched_bank_id": "BNK000064",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000079",
@@ -571,9 +571,9 @@
     "matched_bank_id": "BNK000080",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000048",
@@ -583,9 +583,9 @@
     "matched_bank_id": "BNK000049",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000022",
@@ -595,9 +595,9 @@
     "matched_bank_id": "BNK000023",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000052",
@@ -607,9 +607,9 @@
     "matched_bank_id": "BNK000053",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000018",
@@ -619,9 +619,9 @@
     "matched_bank_id": "BNK000019",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000045",
@@ -631,9 +631,9 @@
     "matched_bank_id": "BNK000046",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000037",
@@ -643,9 +643,9 @@
     "matched_bank_id": "BNK000038",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000127",
@@ -655,9 +655,9 @@
     "matched_bank_id": "BNK000128",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000101",
@@ -667,9 +667,9 @@
     "matched_bank_id": "BNK000102",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000005",
@@ -679,9 +679,9 @@
     "matched_bank_id": "BNK000005",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000007",
@@ -691,9 +691,9 @@
     "matched_bank_id": "BNK000007",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000132",
@@ -703,9 +703,9 @@
     "matched_bank_id": "BNK000132",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000023",
@@ -715,9 +715,9 @@
     "matched_bank_id": "BNK000024",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000073",
@@ -727,9 +727,9 @@
     "matched_bank_id": "BNK000074",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000060",
@@ -739,9 +739,9 @@
     "matched_bank_id": "BNK000061",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000017",
@@ -751,9 +751,9 @@
     "matched_bank_id": "BNK000018",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000009",
@@ -763,9 +763,9 @@
     "matched_bank_id": "BNK000009",
     "confidence": 1.0,
     "rationale": "raw txn_id + amount + date identical across all three sources",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000024",
@@ -775,9 +775,9 @@
     "matched_bank_id": "BNK000025",
     "confidence": 0.8999999999999999,
     "rationale": "[split_settlement] 3 gateway legs (GTW000025, GTW000023, GTW000024) sum exactly to ledger amount Rs224516.33; same merchant name; bank anchor matched on id+amount+date",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000028",
@@ -787,9 +787,9 @@
     "matched_bank_id": "BNK000029",
     "confidence": 0.8999999999999999,
     "rationale": "[split_settlement] 2 gateway legs (GTW000030, GTW000029) sum exactly to ledger amount Rs154127.04; same merchant name; bank anchor matched on id+amount+date",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000116",
@@ -799,9 +799,9 @@
     "matched_bank_id": "BNK000117",
     "confidence": 0.8999999999999999,
     "rationale": "[split_settlement] 3 gateway legs (GTW000123, GTW000124, GTW000122) sum exactly to ledger amount Rs176570.45; same merchant name; bank anchor matched on id+amount+date",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000014",
@@ -811,9 +811,9 @@
     "matched_bank_id": "BNK000015",
     "confidence": 0.8999999999999999,
     "rationale": "[split_settlement] 2 gateway legs (GTW000014, GTW000015) sum exactly to ledger amount Rs213300.04; same merchant name; bank anchor matched on id+amount+date",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000117",
@@ -823,9 +823,9 @@
     "matched_bank_id": "BNK000118",
     "confidence": 0.8999999999999999,
     "rationale": "[split_settlement] 3 gateway legs (GTW000127, GTW000125, GTW000126) sum exactly to ledger amount Rs35234.14; same merchant name; bank anchor matched on id+amount+date",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000122",
@@ -835,9 +835,9 @@
     "matched_bank_id": "BNK000123",
     "confidence": 0.8999999999999999,
     "rationale": "[split_settlement] 2 gateway legs (GTW000135, GTW000136) sum exactly to ledger amount Rs84595.22; same merchant name; bank anchor matched on id+amount+date",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000121",
@@ -847,9 +847,9 @@
     "matched_bank_id": "BNK000122",
     "confidence": 0.8999999999999999,
     "rationale": "[split_settlement] 3 gateway legs (GTW000133, GTW000132, GTW000134) sum exactly to ledger amount Rs192295.88; same merchant name; bank anchor matched on id+amount+date",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.359743+00:00"
   },
   {
     "ledger_id": "LDG000061",
@@ -859,9 +859,9 @@
     "matched_bank_id": "BNK000062",
     "confidence": 0.8999999999999999,
     "rationale": "[split_settlement] 2 gateway legs (GTW000064, GTW000065) sum exactly to ledger amount Rs184773.06; same merchant name; bank anchor matched on id+amount+date",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000056",
@@ -871,9 +871,9 @@
     "matched_bank_id": "BNK000057",
     "confidence": 0.8999999999999999,
     "rationale": "[split_settlement] 2 gateway legs (GTW000058, GTW000059) sum exactly to ledger amount Rs68200.53; same merchant name; bank anchor matched on id+amount+date",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000081",
@@ -883,9 +883,9 @@
     "matched_bank_id": "BNK000082",
     "confidence": 0.8999999999999999,
     "rationale": "[split_settlement] 2 gateway legs (GTW000084, GTW000083) sum exactly to ledger amount Rs220704.02; same merchant name; bank anchor matched on id+amount+date",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000113",
@@ -895,9 +895,9 @@
     "matched_bank_id": "BNK000114",
     "confidence": 0.8999999999999999,
     "rationale": "[split_settlement] 2 gateway legs (GTW000119, GTW000118) sum exactly to ledger amount Rs115913.28; same merchant name; bank anchor matched on id+amount+date",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000026",
@@ -907,9 +907,9 @@
     "matched_bank_id": "BNK000027",
     "confidence": 0.97,
     "rationale": "[id_truncated] normalized txn_id agrees (713595939158); amount+date exact",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000003",
@@ -919,9 +919,9 @@
     "matched_bank_id": "BNK000003",
     "confidence": 0.97,
     "rationale": "[id_truncated] normalized txn_id agrees (409572486117); amount+date exact",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000108",
@@ -931,9 +931,9 @@
     "matched_bank_id": "BNK000109",
     "confidence": 0.97,
     "rationale": "[id_truncated] normalized txn_id agrees (134044402265); amount+date exact",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000068",
@@ -943,9 +943,9 @@
     "matched_bank_id": "BNK000069",
     "confidence": 0.97,
     "rationale": "[id_truncated] normalized txn_id agrees (720351653957); amount+date exact",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000034",
@@ -955,9 +955,9 @@
     "matched_bank_id": "BNK000035",
     "confidence": 0.97,
     "rationale": "[id_truncated] normalized txn_id agrees (801375216695); amount+date exact",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000066",
@@ -967,9 +967,9 @@
     "matched_bank_id": "BNK000067",
     "confidence": 0.97,
     "rationale": "[id_truncated] normalized txn_id agrees (098894333023); amount+date exact",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000071",
@@ -979,9 +979,9 @@
     "matched_bank_id": "BNK000072",
     "confidence": 0.97,
     "rationale": "[id_truncated] normalized txn_id agrees (372044912132); amount+date exact",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000057",
@@ -991,9 +991,9 @@
     "matched_bank_id": "BNK000058",
     "confidence": 0.97,
     "rationale": "[id_truncated] normalized txn_id agrees (588080098557); amount+date exact",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000002",
@@ -1003,9 +1003,9 @@
     "matched_bank_id": "BNK000002",
     "confidence": 0.97,
     "rationale": "[id_truncated] normalized txn_id agrees (481367606524); amount+date exact",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000096",
@@ -1015,9 +1015,9 @@
     "matched_bank_id": "BNK000097",
     "confidence": 0.97,
     "rationale": "[id_truncated] normalized txn_id agrees (578289542557); amount+date exact",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000059",
@@ -1027,9 +1027,9 @@
     "matched_bank_id": "BNK000060",
     "confidence": 0.97,
     "rationale": "[id_truncated] normalized txn_id agrees (170964556869); amount+date exact",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000118",
@@ -1039,9 +1039,9 @@
     "matched_bank_id": "BNK000119",
     "confidence": 0.97,
     "rationale": "[id_truncated] normalized txn_id agrees (178380759187); amount+date exact",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000130",
@@ -1051,9 +1051,9 @@
     "matched_bank_id": "BNK000130",
     "confidence": 0.97,
     "rationale": "[id_truncated] normalized txn_id agrees (431985974347); amount+date exact",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000010",
@@ -1063,9 +1063,9 @@
     "matched_bank_id": "BNK000010",
     "confidence": 0.97,
     "rationale": "[id_truncated] normalized txn_id agrees (103972677641); amount+date exact",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000124",
@@ -1075,9 +1075,9 @@
     "matched_bank_id": "BNK000125",
     "confidence": 0.97,
     "rationale": "[id_truncated] normalized txn_id agrees (771915064761); amount+date exact",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000072",
@@ -1087,9 +1087,9 @@
     "matched_bank_id": "BNK000073",
     "confidence": 0.97,
     "rationale": "[id_truncated] normalized txn_id agrees (299063869167); amount+date exact",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000031",
@@ -1099,9 +1099,9 @@
     "matched_bank_id": "BNK000032",
     "confidence": 0.97,
     "rationale": "[id_truncated] normalized txn_id agrees (296710243928); amount+date exact",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000055",
@@ -1111,9 +1111,9 @@
     "matched_bank_id": "BNK000056",
     "confidence": 0.97,
     "rationale": "[id_truncated] normalized txn_id agrees (053413395817); amount+date exact",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000041",
@@ -1123,9 +1123,9 @@
     "matched_bank_id": "BNK000042",
     "confidence": 0.97,
     "rationale": "[id_truncated] normalized txn_id agrees (337780069974); amount+date exact",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000076",
@@ -1135,9 +1135,9 @@
     "matched_bank_id": "BNK000077",
     "confidence": 0.97,
     "rationale": "[id_truncated] normalized txn_id agrees (387619490111); amount+date exact",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000025",
@@ -1147,9 +1147,9 @@
     "matched_bank_id": "BNK000026",
     "confidence": 0.97,
     "rationale": "[id_truncated] normalized txn_id agrees (709209002862); amount+date exact",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000111",
@@ -1159,9 +1159,9 @@
     "matched_bank_id": "BNK000112",
     "confidence": 0.97,
     "rationale": "[id_truncated] normalized txn_id agrees (709445965738); amount+date exact",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000058",
@@ -1171,9 +1171,9 @@
     "matched_bank_id": "BNK000059",
     "confidence": 0.97,
     "rationale": "[id_truncated] normalized txn_id agrees (255333315159); amount+date exact",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000089",
@@ -1183,9 +1183,9 @@
     "matched_bank_id": "BNK000090",
     "confidence": 0.93,
     "rationale": "[timezone_shift] raw txn_id+amount exact; dates within 1d window",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000136",
@@ -1195,9 +1195,9 @@
     "matched_bank_id": "BNK000134",
     "confidence": 0.93,
     "rationale": "[timezone_shift] raw txn_id+amount exact; dates within 1d window",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000084",
@@ -1207,9 +1207,9 @@
     "matched_bank_id": "BNK000085",
     "confidence": 0.93,
     "rationale": "[timezone_shift] raw txn_id+amount exact; dates within 1d window",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000080",
@@ -1219,9 +1219,9 @@
     "matched_bank_id": "BNK000081",
     "confidence": 0.93,
     "rationale": "[timezone_shift] raw txn_id+amount exact; dates within 1d window",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000088",
@@ -1231,9 +1231,9 @@
     "matched_bank_id": "BNK000089",
     "confidence": 0.93,
     "rationale": "[timezone_shift] raw txn_id+amount exact; dates within 1d window",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000001",
@@ -1243,9 +1243,9 @@
     "matched_bank_id": "BNK000001",
     "confidence": 0.93,
     "rationale": "[timezone_shift] raw txn_id+amount exact; dates within 1d window",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000074",
@@ -1255,9 +1255,9 @@
     "matched_bank_id": "BNK000075",
     "confidence": 0.93,
     "rationale": "[timezone_shift] raw txn_id+amount exact; dates within 1d window",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000030",
@@ -1267,9 +1267,9 @@
     "matched_bank_id": "BNK000031",
     "confidence": 0.93,
     "rationale": "[timezone_shift] raw txn_id+amount exact; dates within 1d window",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000078",
@@ -1279,9 +1279,9 @@
     "matched_bank_id": "BNK000079",
     "confidence": 0.93,
     "rationale": "[timezone_shift] raw txn_id+amount exact; dates within 1d window",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000137",
@@ -1291,9 +1291,9 @@
     "matched_bank_id": "BNK000135",
     "confidence": 0.9,
     "rationale": "[rounding_drift] raw txn_id+date exact; amount drift Rs0.90 within tolerance",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000125",
@@ -1303,9 +1303,9 @@
     "matched_bank_id": "BNK000126",
     "confidence": 0.9,
     "rationale": "[rounding_drift] raw txn_id+date exact; amount drift Rs0.10 within tolerance",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000112",
@@ -1315,9 +1315,9 @@
     "matched_bank_id": "BNK000113",
     "confidence": 0.9,
     "rationale": "[rounding_drift] raw txn_id+date exact; amount drift Rs0.10 within tolerance",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000106",
@@ -1327,9 +1327,9 @@
     "matched_bank_id": "BNK000107",
     "confidence": 0.9,
     "rationale": "[rounding_drift] raw txn_id+date exact; amount drift Rs0.49 within tolerance",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000103",
@@ -1339,9 +1339,9 @@
     "matched_bank_id": "BNK000104",
     "confidence": 0.9,
     "rationale": "[rounding_drift] raw txn_id+date exact; amount drift Rs0.75 within tolerance",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000082",
@@ -1351,9 +1351,9 @@
     "matched_bank_id": "BNK000083",
     "confidence": 0.9,
     "rationale": "[rounding_drift] raw txn_id+date exact; amount drift Rs0.67 within tolerance",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000095",
@@ -1363,9 +1363,9 @@
     "matched_bank_id": "BNK000096",
     "confidence": 0.9,
     "rationale": "[rounding_drift] raw txn_id+date exact; amount drift Rs0.99 within tolerance",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000094",
@@ -1375,9 +1375,9 @@
     "matched_bank_id": "BNK000095",
     "confidence": 0.9,
     "rationale": "[rounding_drift] raw txn_id+date exact; amount drift Rs0.75 within tolerance",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000097",
@@ -1387,9 +1387,9 @@
     "matched_bank_id": "BNK000098",
     "confidence": 0.9,
     "rationale": "[rounding_drift] raw txn_id+date exact; amount drift Rs0.50 within tolerance",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000075",
@@ -1399,9 +1399,9 @@
     "matched_bank_id": "BNK000076",
     "confidence": 0.9,
     "rationale": "[rounding_drift] raw txn_id+date exact; amount drift Rs0.90 within tolerance",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000042",
@@ -1411,9 +1411,9 @@
     "matched_bank_id": "BNK000043",
     "confidence": 0.9,
     "rationale": "[rounding_drift] raw txn_id+date exact; amount drift Rs0.20 within tolerance",
-    "provider": "n/a",
-    "model": "n/a",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "provider": "deterministic (no LLM)",
+    "model": "deterministic (no LLM)",
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000119",
@@ -1425,7 +1425,7 @@
     "rationale": "There are two identical gateway candidates (GTW000129 and GTW000130) with the exact same transaction ID and amount, making it impossible to distinguish the correct gateway record. While bank candidate BNK000120 matches the amount, date, and transaction reference perfectly, the ambiguity on the gateway side prevents a safe full resolution.",
     "provider": "GeminiProvider",
     "model": "gemini-3.5-flash-lite",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000000",
@@ -1437,7 +1437,7 @@
     "rationale": "The ledger record for Shah & Co with amount 159913.48 and txn_id TXN040250165258 directly matches bank record BNK000000 on amount, reference number, merchant name, and date. There is no matching gateway record because the available gateway candidates belong to Kapoor & Co with a completely different amount and reference number, making this a valid one-sided bank match.",
     "provider": "GeminiProvider",
     "model": "gemini-3.5-flash-lite",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000091",
@@ -1449,7 +1449,7 @@
     "rationale": "There are two identical gateway candidates (GTW000096 and GTW000095) sharing the exact same gateway_txn_id and amount, making it impossible to distinguish between them without arbitrary selection. While bank candidate BNK000092 uniquely matches the bank side, the ambiguity on the gateway side prevents a fully resolved 3-way match.",
     "provider": "GeminiProvider",
     "model": "gemini-3.5-flash-lite",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000070",
@@ -1461,7 +1461,7 @@
     "rationale": "The bank statement record shares an exact reference number match (TXN833384062806), identical amount (158069.34), matching merchant narration, and same-day value date, representing a valid one-sided bank match with no gateway record present.",
     "provider": "GeminiProvider",
     "model": "gemini-3.5-flash-lite",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000011",
@@ -1473,7 +1473,7 @@
     "rationale": "While the gateway match GTW000011 aligns perfectly on txn_id and amount, the bank statement contains two identical records (BNK000011 and BNK000012) sharing the exact same reference_no, amount, and narration on the same day. Since there are duplicate bank candidates that cannot be distinguished without risking an incorrect match, the verdict is uncertain.",
     "provider": "GeminiProvider",
     "model": "gemini-3.5-flash-lite",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000138",
@@ -1485,7 +1485,7 @@
     "rationale": "The ledger record matches the gateway record perfectly on gateway_txn_id/txn_id (TXN549531328709), amount (50072.58), and merchant name. There are no candidate bank statement records available, making this a correct one-sided match.",
     "provider": "GeminiProvider",
     "model": "gemini-3.5-flash-lite",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000128",
@@ -1497,7 +1497,7 @@
     "rationale": "The ledger record matches the gateway settlement record perfectly on transaction ID, amount, merchant name, date, and payment mode. The bank statement has no corresponding record, making this a valid one-sided match.",
     "provider": "GeminiProvider",
     "model": "gemini-3.5-flash-lite",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000065",
@@ -1509,7 +1509,7 @@
     "rationale": "Bank record BNK000066 has an exact match on amount (112367.87), transaction mode (IMPS), merchant name (Pillai & Co), and reference number matching the ledger txn_id (TXN423598812685) on the same date. The gateway candidates belong to a completely different merchant and amount, meaning this is a one-sided gateway match missing its counterpart.",
     "provider": "GeminiProvider",
     "model": "gemini-3.5-flash-lite",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000126",
@@ -1521,7 +1521,7 @@
     "rationale": "While the bank record matches cleanly by reference_no and amount, there are two identical gateway settlement records with the exact same gateway_txn_id, amount, and date, making it impossible to genuinely distinguish between GTW000140 and GTW000141 without arbitrary picking.",
     "provider": "GeminiProvider",
     "model": "gemini-3.5-flash-lite",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000133",
@@ -1533,7 +1533,7 @@
     "rationale": "The gateway candidate GTW000148 has an exact matching transaction ID (TXN484755635061), amount (243158.09), and merchant name on the same calendar day. There are no candidate bank statement records in range, making this a correct and complete one-sided match.",
     "provider": "GeminiProvider",
     "model": "gemini-3.5-flash-lite",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000016",
@@ -1545,7 +1545,7 @@
     "rationale": "The bank statement record matches the ledger record perfectly on amount (6415.92), reference number (TXN304193882632), merchant/narration (Bose & Co), and value date (2026-06-18) with no gateway candidate present.",
     "provider": "GeminiProvider",
     "model": "gemini-3.5-flash-lite",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000039",
@@ -1557,7 +1557,7 @@
     "rationale": "The bank record BNK000040 matches the ledger record LDG000039 exactly on amount (85145.98), merchant name (Sharma Brothers), payment mode (CARD), reference number/txn_id (TXN568443739892), and value date (2026-07-17). There is no plausible gateway record for this transaction, representing a one-sided match on the bank side.",
     "provider": "GeminiProvider",
     "model": "gemini-3.5-flash-lite",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000040",
@@ -1569,7 +1569,7 @@
     "rationale": "The ledger record matches the bank statement record BNK000041 on exact amount (193924.32), transaction reference number (TXN919318090189), merchant narration, and payment mode (IMPS) with a normal same-day timestamp lag. There is no gateway record candidate, making this a correct one-sided match.",
     "provider": "GeminiProvider",
     "model": "gemini-3.5-flash-lite",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000062",
@@ -1581,7 +1581,7 @@
     "rationale": "The bank statement row matches the ledger by exact amount (97022.67), reference number (TXN627698351396), and matching date/merchant. However, there are two competing gateway candidates with the exact same transaction ID and amount, making the gateway side uncertain due to a system duplication; thus we match the bank side securely while leaving the gateway side null.",
     "provider": "GeminiProvider",
     "model": "gemini-3.5-flash-lite",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000006",
@@ -1593,7 +1593,7 @@
     "rationale": "There are two competing gateway records with identical transaction IDs and amounts (GTW000005 and GTW000006) for the same ledger entry, making it impossible to genuinely distinguish which one is correct. Therefore, the gateway side is uncertain while the bank side has a single candidate.",
     "provider": "GeminiProvider",
     "model": "gemini-3.5-flash-lite",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000135",
@@ -1605,7 +1605,7 @@
     "rationale": "The ledger record matches the gateway record perfectly on transaction/gateway ID (TXN793028198550), amount (171642.81), and merchant name. There are no bank statement candidates available, making this a correct one-sided match.",
     "provider": "GeminiProvider",
     "model": "gemini-3.5-flash-lite",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000029",
@@ -1617,7 +1617,7 @@
     "rationale": "There is a clear single bank candidate matching the ledger txn_id and amount, but there are two identical gateway settlement candidates (GTW000031 and GTW000032) sharing the exact same transaction ID and amount within seconds of each other. Because it is impossible to genuinely distinguish between the two gateway records without arbitrarily picking one, the gateway match is uncertain.",
     "provider": "GeminiProvider",
     "model": "gemini-3.5-flash-lite",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000021",
@@ -1629,7 +1629,7 @@
     "rationale": "The bank record matches the ledger record precisely on amount (215218.66), merchant name (Shah & Co), transaction mode (IMPS), and shares the exact transaction reference number (TXN028486959867). There are no gateway candidates, making this a correct one-sided bank match.",
     "provider": "GeminiProvider",
     "model": "gemini-3.5-flash-lite",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000134",
@@ -1641,7 +1641,7 @@
     "rationale": "The bank statement record matches the ledger record precisely on amount (78934.28), transaction reference number (TXN171143137448), merchant narration, and value date (2026-06-18), while no gateway candidate exists. This is a valid one-sided match.",
     "provider": "GeminiProvider",
     "model": "gemini-3.5-flash-lite",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000087",
@@ -1653,7 +1653,7 @@
     "rationale": "There are two identical gateway settlement records with the same txn_id, amount, and merchant sharing the exact same day, which makes it impossible to distinguish which gateway entry legitimately corresponds to the ledger row without external sequencing data.",
     "provider": "GeminiProvider",
     "model": "gemini-3.5-flash-lite",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000067",
@@ -1665,7 +1665,7 @@
     "rationale": "The bank record BNK000068 shares an exact match on the reference_no (TXN400285751230), amount (162621.35), merchant narration, and value date (2026-07-15) with the ledger record, while no gateway candidate exists.",
     "provider": "GeminiProvider",
     "model": "gemini-3.5-flash-lite",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   },
   {
     "ledger_id": "LDG000047",
@@ -1677,6 +1677,6 @@
     "rationale": "While the bank record BNK000048 matches the transaction ID and amount, there are two identical gateway records (GTW000048 and GTW000049) sharing the exact same gateway_txn_id, amount, and merchant name on the same day. Because it is impossible to genuinely distinguish which of the two gateway records corresponds to the ledger entry without additional system context, the verdict is uncertain.",
     "provider": "GeminiProvider",
     "model": "gemini-3.5-flash-lite",
-    "timestamp": "2026-08-31T16:18:14.240819+00:00"
+    "timestamp": "2026-08-31T17:14:30.360742+00:00"
   }
 ]

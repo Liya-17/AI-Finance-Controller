@@ -341,6 +341,14 @@ def verify_against_ground_truth(results: list, ground_truth_path: Path = DATA_DI
     no_match_correct, no_match_incorrect = 0, 0
     uncertain_count = 0
     by_scenario = {}
+    # Per-row (ledger_id, confidence, verdict, correct) - feeds the
+    # dashboard's confidence calibration panel. "correct" for `uncertain`
+    # means the row was genuinely ambiguous (ground truth has a tied
+    # candidate on at least one side) - i.e. abstaining was the right call,
+    # not a miss. `uncertain` on a row that WASN'T actually tied would be
+    # miscalibrated (see is_genuinely_ambiguous below) but this dataset has
+    # no such case - stated here so the logic is auditable either way.
+    per_row_calibration = []
 
     for r in results:
         l_evt = ledger_to_event.get(r.ledger_id)
@@ -410,13 +418,29 @@ def verify_against_ground_truth(results: list, ground_truth_path: Path = DATA_DI
                     "claimed_bank": r.matched_bank_id, "true_event": l_evt,
                     "true_scenario": scenario, "rationale": r.rationale,
                 })
+            per_row_calibration.append({
+                "ledger_id": r.ledger_id, "confidence": r.confidence, "verdict": r.verdict, "correct": ok,
+            })
         elif r.verdict == "no_match":
             if not truly_resolvable:
                 no_match_correct += 1
+                row_ok = True
             else:
                 no_match_incorrect += 1  # a real match existed on at least one side and Tier 3 missed it entirely
+                row_ok = False
+            per_row_calibration.append({
+                "ledger_id": r.ledger_id, "confidence": r.confidence, "verdict": r.verdict, "correct": row_ok,
+            })
         else:  # uncertain
             uncertain_count += 1
+            # Correct iff at least one side is genuinely tied in ground
+            # truth (a real ambiguity to abstain on) - see comment above
+            # per_row_calibration's declaration.
+            is_genuinely_ambiguous = gateway_tied or bank_tied
+            per_row_calibration.append({
+                "ledger_id": r.ledger_id, "confidence": r.confidence, "verdict": r.verdict,
+                "correct": is_genuinely_ambiguous,
+            })
 
     total = len(results)
     return {
@@ -431,6 +455,7 @@ def verify_against_ground_truth(results: list, ground_truth_path: Path = DATA_DI
         "no_match_incorrect_missed_real_match": no_match_incorrect,
         "uncertain_verdicts": uncertain_count,
         "breakdown_by_scenario": by_scenario,
+        "per_row_calibration": per_row_calibration,
     }
 
 

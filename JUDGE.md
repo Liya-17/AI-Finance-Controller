@@ -38,8 +38,9 @@ Tier 3 reuses its committed, already-verified decisions
 1. **[`src/matchers/llm_naive_experiment.py`](src/matchers/llm_naive_experiment.py)**
    — the naive-vs-tiered experiment. Actually run (not simulated) against
    the same 76-event pool the tiered pipeline handles: 82.7% precision,
-   9 of 13 wrong matches force-matched genuinely-orphan events with
-   confident, invented rationale. This is the measured argument for the
+   and all 13 wrong matches force-matched genuinely-orphan events with
+   confident, invented rationale — the naive pass never fabricated a wrong
+   match for any other scenario type. This is the measured argument for the
    tiered design — see the module docstring and
    `reports/naive_llm_experiment_summary.json` for the raw numbers.
 

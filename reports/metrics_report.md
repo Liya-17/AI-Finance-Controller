@@ -66,14 +66,16 @@ behind (pretending Tier 2 doesn't exist), so the comparison is apples-to-apples.
 |---|---|---|
 | Scope | All 76 Tier-1 leftovers, one call | Tier 2 resolves 54/76 algorithmically first; Tier 3 only adjudicates the true ~22-event remainder |
 | Precision | **82.7%** (62/75 claimed matches correct) | **100%** at every tier (Tier 1, Tier 2, and Tier 3's committed matches) |
-| Wrong matches | **13**, of which **9 were orphan events force-matched** with confident but false rationale | **0** measured false positives across the entire pipeline |
+| Wrong matches | **13 — all 13 were orphan events force-matched** with confident but false rationale | **0** measured false positives across the entire pipeline |
 | Time / cost | 24.1s, $0 (free tier) | ~0.5s (Tier 1+2) + ~90s for 22 rate-limited Tier 3 calls, $0 |
 
 The naive run's failure mode is exactly what the track brief predicts: given
 a single unstructured pass over everything, the model invents
-plausible-sounding rationale for matches that don't exist — 9 of 13 wrong
-matches were orphan events (genuinely missing from one source) that the
-naive prompt confidently paired with an unrelated row anyway. This is the
+plausible-sounding rationale for matches that don't exist — every single
+one of the 13 wrong matches was an orphan event (genuinely missing from one
+source) that the naive prompt confidently paired with an unrelated row
+anyway; it never fabricated a wrong match for any other scenario type.
+This is the
 audit-trail-corruption risk the tiered design exists to prevent, and it is
 measured here, not asserted. Full raw output: `naive_llm_raw_response.txt`,
 `naive_llm_experiment_summary.json`.

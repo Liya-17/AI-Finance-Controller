@@ -1,0 +1,134 @@
+[
+  {
+    "ledger_id": "LDG000119",
+    "confidence": 0.85,
+    "verdict": "uncertain",
+    "correct": true
+  },
+  {
+    "ledger_id": "LDG000000",
+    "confidence": 0.99,
+    "verdict": "match",
+    "correct": true
+  },
+  {
+    "ledger_id": "LDG000091",
+    "confidence": 0.9,
+    "verdict": "uncertain",
+    "correct": true
+  },
+  {
+    "ledger_id": "LDG000070",
+    "confidence": 1.0,
+    "verdict": "match",
+    "correct": true
+  },
+  {
+    "ledger_id": "LDG000011",
+    "confidence": 0.8,
+    "verdict": "uncertain",
+    "correct": true
+  },
+  {
+    "ledger_id": "LDG000138",
+    "confidence": 1.0,
+    "verdict": "match",
+    "correct": true
+  },
+  {
+    "ledger_id": "LDG000128",
+    "confidence": 1.0,
+    "verdict": "match",
+    "correct": true
+  },
+  {
+    "ledger_id": "LDG000065",
+    "confidence": 0.99,
+    "verdict": "match",
+    "correct": true
+  },
+  {
+    "ledger_id": "LDG000126",
+    "confidence": 0.8,
+    "verdict": "uncertain",
+    "correct": true
+  },
+  {
+    "ledger_id": "LDG000133",
+    "confidence": 0.99,
+    "verdict": "match",
+    "correct": true
+  },
+  {
+    "ledger_id": "LDG000016",
+    "confidence": 1.0,
+    "verdict": "match",
+    "correct": true
+  },
+  {
+    "ledger_id": "LDG000039",
+    "confidence": 0.95,
+    "verdict": "match",
+    "correct": true
+  },
+  {
+    "ledger_id": "LDG000040",
+    "confidence": 0.99,
+    "verdict": "match",
+    "correct": true
+  },
+  {
+    "ledger_id": "LDG000062",
+    "confidence": 0.85,
+    "verdict": "match",
+    "correct": true
+  },
+  {
+    "ledger_id": "LDG000006",
+    "confidence": 0.85,
+    "verdict": "uncertain",
+    "correct": true
+  },
+  {
+    "ledger_id": "LDG000135",
+    "confidence": 0.98,
+    "verdict": "match",
+    "correct": true
+  },
+  {
+    "ledger_id": "LDG000029",
+    "confidence": 0.85,
+    "verdict": "uncertain",
+    "correct": true
+  },
+  {
+    "ledger_id": "LDG000021",
+    "confidence": 1.0,
+    "verdict": "match",
+    "correct": true
+  },
+  {
+    "ledger_id": "LDG000134",
+    "confidence": 0.99,
+    "verdict": "match",
+    "correct": true
+  },
+  {
+    "ledger_id": "LDG000087",
+    "confidence": 0.9,
+    "verdict": "uncertain",
+    "correct": true
+  },
+  {
+    "ledger_id": "LDG000067",
+    "confidence": 1.0,
+    "verdict": "match",
+    "correct": true
+  },
+  {
+    "ledger_id": "LDG000047",
+    "confidence": 0.85,
+    "verdict": "uncertain",
+    "correct": true
+  }
+]

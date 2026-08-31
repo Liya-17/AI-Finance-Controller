@@ -23,7 +23,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent / "matchers"))
 
 from exact_matcher import load_sources, run_exact_match
 from fuzzy_matcher import run_tier2
-from llm_adjudicator import AdjudicationResult, require_api_key, run_tier3
+from llm_adjudicator import AdjudicationResult, require_api_key, run_tier3, verify_against_ground_truth
 
 from audit_log import AuditLog, print_three_bucket_summary
 from exceptions import build_exception_queue, category_breakdown, save_exception_queue
@@ -32,6 +32,7 @@ REPORTS_DIR = Path(__file__).resolve().parent.parent / "reports"
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 TIER3_CACHE_PATH = REPORTS_DIR / "tier3_adjudication_results.json"
 TIER3_CACHE_META_PATH = REPORTS_DIR / "tier3_adjudication_summary.json"
+TIER3_CALIBRATION_PATH = REPORTS_DIR / "tier3_calibration.json"
 
 # Historical fact about the committed cache, independent of whatever
 # LLM_PROVIDER happens to be set to on whoever's machine runs this - the
@@ -82,12 +83,23 @@ def run_full_pipeline(rerun_tier3: bool = False):
 
     exceptions = build_exception_queue(tier3_results)
 
+    # Re-score Tier 3 against ground truth every run (cheap - no API call,
+    # ground_truth.csv is committed) and persist the per-row calibration
+    # data for the dashboard's confidence-calibration panel, so the
+    # dashboard never has to duplicate this scoring logic itself.
+    tier3_verification = verify_against_ground_truth(tier3_results)
+    TIER3_CALIBRATION_PATH.parent.mkdir(parents=True, exist_ok=True)
+    TIER3_CALIBRATION_PATH.write_text(
+        json.dumps(tier3_verification["per_row_calibration"], indent=2, default=str), encoding="utf-8"
+    )
+
     return {
         "tier1": tier1,
         "tier2_combined": combined,
         "tier2_split": split_out,
         "tier2_fuzzy": fuzzy_out,
         "tier3_results": tier3_results,
+        "tier3_verification": tier3_verification,
         "audit_log": log,
         "exceptions": exceptions,
     }

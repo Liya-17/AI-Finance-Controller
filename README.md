@@ -40,7 +40,7 @@ the tiered pipeline (Tier 2 + Tier 3) handles, so this is apples-to-apples:
 |---|---|---|
 | Scope | All 76 Tier-1 leftovers, one call | Tier 2 resolves 54/76 algorithmically; Tier 3 only adjudicates the true ~22-event remainder |
 | Precision | **82.7%** (62/75 claimed matches correct) | **100%** at every tier |
-| Wrong matches | **13**, of which **9 force-matched orphan events** with confident, invented rationale | **0** measured false positives |
+| Wrong matches | **13 — all 13 force-matched orphan events** with confident, invented rationale | **0** measured false positives |
 | Time / cost | 24.1s, $0 (free tier) | ~0.5s (Tier 1+2, no LLM) + ~90s for 22 rate-limited Tier 3 calls, $0 |
 
 Full breakdown, raw output, and the "what broke" story behind these numbers:
