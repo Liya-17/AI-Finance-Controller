@@ -1,7 +1,7 @@
 # Environment / secrets
 .env
 *.env
-ANTHROPIC_API_KEY*
+*_API_KEY*
 
 # Python
 __pycache__/
