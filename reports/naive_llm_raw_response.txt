@@ -1,0 +1,755 @@
+```json
+{
+  "matches": [
+    {
+      "ledger_id": "LDG000026",
+      "gateway_ids": [
+        "GTW000027"
+      ],
+      "bank_ids": [
+        "BNK000027"
+      ],
+      "reasoning": "Matched by amount 141079.58, transaction ID TXN713595939158 (bank has truncated reference '3595939158'), and merchant 'Mehta Grocers LLP' / near-match 'Meht aGrocers LLP'."
+    },
+    {
+      "ledger_id": "LDG000000",
+      "gateway_ids": [],
+      "bank_ids": [
+        "BNK000000"
+      ],
+      "reasoning": "Matched by exact transaction ID TXN040250165258, amount 159913.48, and merchant 'Shah & Co'."
+    },
+    {
+      "ledger_id": "LDG000002",
+      "gateway_ids": [
+        "GTW000001"
+      ],
+      "bank_ids": [
+        "BNK000002"
+      ],
+      "reasoning": "Matched by amount 176191.54, transaction ID TXN481367606524 (bank uses hyphenated reference), and merchant 'Annapurna Enterprises & Sons' / 'Annapurna Enterprises and Sons'."
+    },
+    {
+      "ledger_id": "LDG000003",
+      "gateway_ids": [
+        "GTW000002"
+      ],
+      "bank_ids": [
+        "BNK000003"
+      ],
+      "reasoning": "Matched by amount 172108.74, transaction ID TXN409572486117 (gateway uses lowercase 'txn...'), and merchant 'Verma & Co' / 'Verma &Co'."
+    },
+    {
+      "ledger_id": "LDG000006",
+      "gateway_ids": [
+        "GTW000005",
+        "GTW000006"
+      ],
+      "bank_ids": [
+        "BNK000006"
+      ],
+      "reasoning": "Matched by transaction ID TXN883089040771, amount 134991.08, and merchant 'Sharma Fintech Trading Co'."
+    },
+    {
+      "ledger_id": "LDG000010",
+      "gateway_ids": [
+        "GTW000010"
+      ],
+      "bank_ids": [
+        "BNK000010"
+      ],
+      "reasoning": "Matched by amount 231687.02, transaction ID TXN103972677641 (gateway and bank have truncated IDs '103972677641' and '3972677641'), and merchant 'Modern Timber Trading Co'."
+    },
+    {
+      "ledger_id": "LDG000011",
+      "gateway_ids": [
+        "GTW000011"
+      ],
+      "bank_ids": [
+        "BNK000011",
+        "BNK000012"
+      ],
+      "reasoning": "Matched by transaction ID TXN190156218256, amount 144911.68, and merchant 'Kulkarni Logistics Pvt Ltd'. (Bank statement contains a duplicate entry BNK000012)."
+    },
+    {
+      "ledger_id": "LDG000014",
+      "gateway_ids": [
+        "GTW000014",
+        "GTW000015"
+      ],
+      "bank_ids": [
+        "BNK000015"
+      ],
+      "reasoning": "Matched by transaction ID TXN031914751961, merchant 'Verma & Sons', and split gateway settlement amounts (168268.63 + 45031.41 = 213300.04 matching ledger amount)."
+    },
+    {
+      "ledger_id": "LDG000016",
+      "gateway_ids": [],
+      "bank_ids": [
+        "BNK000017"
+      ],
+      "reasoning": "Matched by transaction ID TXN304193882632, amount 6415.92, and merchant 'Bose & Co'."
+    },
+    {
+      "ledger_id": "LDG000021",
+      "gateway_ids": [],
+      "bank_ids": [
+        "BNK000022"
+      ],
+      "reasoning": "Matched by transaction ID TXN028486959867, amount 215218.66, and merchant 'Shah & Co'."
+    },
+    {
+      "ledger_id": "LDG000024",
+      "gateway_ids": [
+        "GTW000023",
+        "GTW000024",
+        "GTW000025"
+      ],
+      "bank_ids": [
+        "BNK000025"
+      ],
+      "reasoning": "Matched by transaction ID TXN789959560481, merchant 'Bose & Sons Pvt Ltd', and split gateway settlement amounts (52110.59 + 65118.15 + 107287.59 = 224516.33 matching ledger amount)."
+    },
+    {
+      "ledger_id": "LDG000025",
+      "gateway_ids": [
+        "GTW000026"
+      ],
+      "bank_ids": [
+        "BNK000026"
+      ],
+      "reasoning": "Matched by amount 53065.36, transaction ID TXN709209002862 (gateway/bank have truncated or hyphenated references '709209002862' and 'TXN-7092-0900-2862'), and merchant 'Mehta & Sons Pvt Ltd'."
+    },
+    {
+      "ledger_id": "LDG000028",
+      "gateway_ids": [
+        "GTW000029",
+        "GTW000030"
+      ],
+      "bank_ids": [
+        "BNK000029"
+      ],
+      "reasoning": "Matched by transaction ID TXN329247563434, merchant 'Menon & Sons Pvt Ltd', and split gateway settlement amounts (104603.26 + 49523.78 = 154127.04 matching ledger amount)."
+    },
+    {
+      "ledger_id": "LDG000029",
+      "gateway_ids": [
+        "GTW000031",
+        "GTW000032"
+      ],
+      "bank_ids": [
+        "BNK000030"
+      ],
+      "reasoning": "Matched by transaction ID TXN747664702635, amount 85271.15, and merchant 'Mehta Automation Pvt Ltd'."
+    },
+    {
+      "ledger_id": "LDG000030",
+      "gateway_ids": [
+        "GTW000033"
+      ],
+      "bank_ids": [
+        "BNK000031"
+      ],
+      "reasoning": "Matched by transaction ID TXN111571247952, amount 86136.67, and merchant 'Kulkarni Packaging Trading Co'."
+    },
+    {
+      "ledger_id": "LDG000031",
+      "gateway_ids": [
+        "GTW000034"
+      ],
+      "bank_ids": [
+        "BNK000032"
+      ],
+      "reasoning": "Matched by amount 74202.73, transaction ID TXN296710243928 (gateway/bank have truncated ID 'TXN2967102'), and merchant 'Sharma & Co'."
+    },
+    {
+      "ledger_id": "LDG000034",
+      "gateway_ids": [
+        "GTW000037"
+      ],
+      "bank_ids": [
+        "BNK000035"
+      ],
+      "reasoning": "Matched by amount 156386.46, transaction ID TXN801375216695 (gateway/bank have truncated ID 'TXN8013752'), and merchant 'Modern Foods'."
+    },
+    {
+      "ledger_id": "LDG000039",
+      "gateway_ids": [],
+      "bank_ids": [
+        "BNK000040"
+      ],
+      "reasoning": "Matched by transaction ID TXN568443739892, amount 85145.98, and merchant 'Sharma Brothers'."
+    },
+    {
+      "ledger_id": "LDG000040",
+      "gateway_ids": [],
+      "bank_ids": [
+        "BNK000041"
+      ],
+      "reasoning": "Matched by transaction ID TXN919318090189, amount 193924.32, and merchant 'Pillai Handlooms Industries'."
+    },
+    {
+      "ledger_id": "LDG000041",
+      "gateway_ids": [
+        "GTW000042"
+      ],
+      "bank_ids": [
+        "BNK000042"
+      ],
+      "reasoning": "Matched by amount 242339.52, transaction ID TXN337780069974 (gateway has truncated ID 'TXN3377800'), and merchant 'Chatterjee Enterprises Industries' / 'Chatterjee Ent Indus'."
+    },
+    {
+      "ledger_id": "LDG000042",
+      "gateway_ids": [
+        "GTW000043"
+      ],
+      "bank_ids": [
+        "BNK000043"
+      ],
+      "reasoning": "Matched by transaction ID TXN231557108629, amount ~176026.95 (gateway has slight rounding difference to 176026.75), and merchant 'Sundar Wellness Pvt Ltd'."
+    },
+    {
+      "ledger_id": "LDG000047",
+      "gateway_ids": [
+        "GTW000048",
+        "GTW000049"
+      ],
+      "bank_ids": [
+        "BNK000048"
+      ],
+      "reasoning": "Matched by transaction ID TXN366647610091, amount 205724.09, and merchant 'Vertex Industries'."
+    },
+    {
+      "ledger_id": "LDG000055",
+      "gateway_ids": [
+        "GTW000057"
+      ],
+      "bank_ids": [
+        "BNK000056"
+      ],
+      "reasoning": "Matched by amount 77383.64, transaction ID TXN053413395817 (gateway/bank have truncated ID 'TXN0534133'), and merchant 'Krishna Apparels Industries'."
+    },
+    {
+      "ledger_id": "LDG000056",
+      "gateway_ids": [
+        "GTW000058",
+        "GTW000059"
+      ],
+      "bank_ids": [
+        "BNK000057"
+      ],
+      "reasoning": "Matched by transaction ID TXN142646035032, merchant 'Kapoor & Sons Pvt Ltd', and split gateway settlement amounts (49507.39 + 18693.14 = 68200.53 matching ledger amount)."
+    },
+    {
+      "ledger_id": "LDG000057",
+      "gateway_ids": [
+        "GTW000060"
+      ],
+      "bank_ids": [
+        "BNK000058"
+      ],
+      "reasoning": "Matched by amount 72479.88, transaction ID TXN588080098557 (gateway has truncated ID '8080098557', bank has hyphenated reference), and merchant 'Bose & Co'."
+    },
+    {
+      "ledger_id": "LDG000058",
+      "gateway_ids": [
+        "GTW000061"
+      ],
+      "bank_ids": [
+        "BNK000059"
+      ],
+      "reasoning": "Matched by amount 101442.65, transaction ID TXN255333315159 (gateway has truncated ID 'TXN2553333'), and merchant 'Bharat Rides Enterprises' / 'Bharat Rdes Enterprises'."
+    },
+    {
+      "ledger_id": "LDG000059",
+      "gateway_ids": [
+        "GTW000062"
+      ],
+      "bank_ids": [
+        "BNK000060"
+      ],
+      "reasoning": "Matched by amount 239625.9, transaction ID TXN170964556869 (bank has truncated reference '0964556869'), and merchant 'Laxmi Electronics LLP' / 'Laxmi Electronic LLP'."
+    },
+    {
+      "ledger_id": "LDG000061",
+      "gateway_ids": [
+        "GTW000064",
+        "GTW000065"
+      ],
+      "bank_ids": [
+        "BNK000062"
+      ],
+      "reasoning": "Matched by transaction ID TXN948890607956, merchant 'Malhotra Fashions Enterprises', and split gateway settlement amounts (75416.3 + 109356.76 = 184773.06 matching ledger amount)."
+    },
+    {
+      "ledger_id": "LDG000062",
+      "gateway_ids": [
+        "GTW000066",
+        "GTW000067"
+      ],
+      "bank_ids": [
+        "BNK000063"
+      ],
+      "reasoning": "Matched by transaction ID TXN627698351396, amount 97022.67, and merchant 'Kapoor Logistics Enterprises'."
+    },
+    {
+      "ledger_id": "LDG000065",
+      "gateway_ids": [],
+      "bank_ids": [
+        "BNK000066"
+      ],
+      "reasoning": "Matched by transaction ID TXN423598812685, amount 112367.87, and merchant 'Pillai & Co'."
+    },
+    {
+      "ledger_id": "LDG000066",
+      "gateway_ids": [
+        "GTW000070"
+      ],
+      "bank_ids": [
+        "BNK000067"
+      ],
+      "reasoning": "Matched by amount 129062.34, transaction ID TXN098894333023 (gateway has hyphenated reference), and merchant 'Krishna Plastics Trading Co' / 'Krishna Plastics Traidng Co'."
+    },
+    {
+      "ledger_id": "LDG000067",
+      "gateway_ids": [],
+      "bank_ids": [
+        "BNK000068"
+      ],
+      "reasoning": "Matched by transaction ID TXN400285751230, amount 162621.35, and merchant 'Sri Fresh Foods Trading Co'."
+    },
+    {
+      "ledger_id": "LDG000068",
+      "gateway_ids": [
+        "GTW000071"
+      ],
+      "bank_ids": [
+        "BNK000069"
+      ],
+      "reasoning": "Matched by amount 155765.22, transaction ID TXN720351653957 (gateway has truncated ID 'TXN7203516', bank has un-prefixed ID), and merchant 'Kapoor & Sons'."
+    },
+    {
+      "ledger_id": "LDG000070",
+      "gateway_ids": [],
+      "bank_ids": [
+        "BNK000071"
+      ],
+      "reasoning": "Matched by transaction ID TXN833384062806, amount 158069.34, and merchant 'Sundar Rides Pvt Ltd'."
+    },
+    {
+      "ledger_id": "LDG000071",
+      "gateway_ids": [
+        "GTW000073"
+      ],
+      "bank_ids": [
+        "BNK000072"
+      ],
+      "reasoning": "Matched by amount 92188.06, transaction ID TXN372044912132 (gateway has hyphenated reference), and merchant 'Menon Handlooms Enterprises' / 'Menon Handlooms Enterprisse'."
+    },
+    {
+      "ledger_id": "LDG000072",
+      "gateway_ids": [
+        "GTW000074"
+      ],
+      "bank_ids": [
+        "BNK000073"
+      ],
+      "reasoning": "Matched by amount 106683.29, transaction ID TXN299063869167 (gateway/bank have truncated IDs 'TXN2990638' and '9063869167'), and merchant 'Menon & Sons'."
+    },
+    {
+      "ledger_id": "LDG000074",
+      "gateway_ids": [
+        "GTW000076"
+      ],
+      "bank_ids": [
+        "BNK000075"
+      ],
+      "reasoning": "Matched by transaction ID TXN101798996752, amount 65580.77, and merchant 'Patel Brothers'."
+    },
+    {
+      "ledger_id": "LDG000075",
+      "gateway_ids": [
+        "GTW000077"
+      ],
+      "bank_ids": [
+        "BNK000076"
+      ],
+      "reasoning": "Matched by amount 178087.81, transaction ID TXN243549180374 (gateway has minor rounding difference to 178088.71), and merchant 'Iyer Grocers'."
+    },
+    {
+      "ledger_id": "LDG000076",
+      "gateway_ids": [
+        "GTW000078"
+      ],
+      "bank_ids": [
+        "BNK000077"
+      ],
+      "reasoning": "Matched by amount 205868.3, transaction ID TXN387619490111 (gateway has truncated ID 'TXN3876194'), and merchant 'Malhotra & Sons' / 'Mahotra & Sons'."
+    },
+    {
+      "ledger_id": "LDG000078",
+      "gateway_ids": [
+        "GTW000080"
+      ],
+      "bank_ids": [
+        "BNK000079"
+      ],
+      "reasoning": "Matched by transaction ID TXN646294862004, amount 7243.5, and merchant 'Chawla Pharma & Sons'."
+    },
+    {
+      "ledger_id": "LDG000080",
+      "gateway_ids": [
+        "GTW000082"
+      ],
+      "bank_ids": [
+        "BNK000081"
+      ],
+      "reasoning": "Matched by transaction ID TXN034250258620, amount 180342.79, and merchant 'Prime Steel Trading Co'."
+    },
+    {
+      "ledger_id": "LDG000081",
+      "gateway_ids": [
+        "GTW000083",
+        "GTW000084"
+      ],
+      "bank_ids": [
+        "BNK000082"
+      ],
+      "reasoning": "Matched by transaction ID TXN150572961937, merchant 'Joshi & Sons', and split gateway settlement amounts (149934.2 + 70769.82 = 220704.02 matching ledger amount)."
+    },
+    {
+      "ledger_id": "LDG000082",
+      "gateway_ids": [
+        "GTW000085"
+      ],
+      "bank_ids": [
+        "BNK000083"
+      ],
+      "reasoning": "Matched by amount 188797.71 (bank has minor rounding difference to 188797.04), transaction ID TXN851819336855, and merchant 'Chatterjee Steel Pvt Ltd'."
+    },
+    {
+      "ledger_id": "LDG000084",
+      "gateway_ids": [
+        "GTW000087"
+      ],
+      "bank_ids": [
+        "BNK000085"
+      ],
+      "reasoning": "Matched by transaction ID TXN425648775594, amount 60719.68, and merchant 'Reddy Fashions Pvt Ltd'."
+    },
+    {
+      "ledger_id": "LDG000087",
+      "gateway_ids": [
+        "GTW000090",
+        "GTW000091"
+      ],
+      "bank_ids": [
+        "BNK000088"
+      ],
+      "reasoning": "Matched by transaction ID TXN059498419369, amount 132894.16, and merchant 'Jai Bakers Enterprises'."
+    },
+    {
+      "ledger_id": "LDG000088",
+      "gateway_ids": [
+        "GTW000092"
+      ],
+      "bank_ids": [
+        "BNK000089"
+      ],
+      "reasoning": "Matched by transaction ID TXN717820269346, amount 58243.13, and merchant 'Krishna Bakers LLP'."
+    },
+    {
+      "ledger_id": "LDG000089",
+      "gateway_ids": [
+        "GTW000093"
+      ],
+      "bank_ids": [
+        "BNK000090"
+      ],
+      "reasoning": "Matched by transaction ID TXN703261664434, amount 212833.33, and merchant 'Jai Commerce LLP'."
+    },
+    {
+      "ledger_id": "LDG000091",
+      "gateway_ids": [
+        "GTW000095",
+        "GTW000096"
+      ],
+      "bank_ids": [
+        "BNK000092"
+      ],
+      "reasoning": "Matched by transaction ID TXN493797887657, amount 159825.12, and merchant 'Kapoor & Co'."
+    },
+    {
+      "ledger_id": "LDG000094",
+      "gateway_ids": [
+        "GTW000099"
+      ],
+      "bank_ids": [
+        "BNK000095"
+      ],
+      "reasoning": "Matched by amount 161564.62 (gateway has minor rounding difference to 161565.37), transaction ID TXN181931987947, and merchant 'Menon & Sons Pvt Ltd'."
+    },
+    {
+      "ledger_id": "LDG000095",
+      "gateway_ids": [
+        "GTW000100"
+      ],
+      "bank_ids": [
+        "BNK000096"
+      ],
+      "reasoning": "Matched by amount 205891.5 (gateway has minor rounding difference to 205890.51), transaction ID TXN066982054682, and merchant 'Nair Brothers'."
+    },
+    {
+      "ledger_id": "LDG000096",
+      "gateway_ids": [
+        "GTW000101"
+      ],
+      "bank_ids": [
+        "BNK000097"
+      ],
+      "reasoning": "Matched by amount 58721.51, transaction ID TXN578289542557 (bank has truncated reference '8289542557'), and merchant 'Maa Steel & Co'."
+    },
+    {
+      "ledger_id": "LDG000097",
+      "gateway_ids": [
+        "GTW000102"
+      ],
+      "bank_ids": [
+        "BNK000098"
+      ],
+      "reasoning": "Matched by amount 106935.07 (gateway has minor rounding difference to 106935.57), transaction ID TXN421522814044, and merchant 'Malhotra & Sons Pvt Ltd'."
+    },
+    {
+      "ledger_id": "LDG000103",
+      "gateway_ids": [
+        "GTW000108"
+      ],
+      "bank_ids": [
+        "BNK000104"
+      ],
+      "reasoning": "Matched by amount 45030.89 (bank has minor rounding difference to 45030.14), transaction ID TXN233459268687, and merchant 'Nair Motors & Sons'."
+    },
+    {
+      "ledger_id": "LDG000106",
+      "gateway_ids": [
+        "GTW000111"
+      ],
+      "bank_ids": [
+        "BNK000107"
+      ],
+      "reasoning": "Matched by amount 86572.67 (bank has minor rounding difference to 86573.16), transaction ID TXN742531537220, and merchant 'Om Commerce Industries'."
+    },
+    {
+      "ledger_id": "LDG000108",
+      "gateway_ids": [
+        "GTW000113"
+      ],
+      "bank_ids": [
+        "BNK000109"
+      ],
+      "reasoning": "Matched by amount 3273.97, transaction ID TXN134044402265 (gateway has un-prefixed ID, bank has hyphenated reference), and merchant 'Sunrise Motors'."
+    },
+    {
+      "ledger_id": "LDG000111",
+      "gateway_ids": [
+        "GTW000116"
+      ],
+      "bank_ids": [
+        "BNK000112"
+      ],
+      "reasoning": "Matched by amount 198858.62, transaction ID TXN709445965738 (gateway has hyphenated reference), and merchant 'Nova Wellness & Sons' / 'Nova Wellnses & Sons'."
+    },
+    {
+      "ledger_id": "LDG000112",
+      "gateway_ids": [
+        "GTW000117"
+      ],
+      "bank_ids": [
+        "BNK000113"
+      ],
+      "reasoning": "Matched by amount 228623.83 (gateway has minor rounding difference to 228623.93), transaction ID TXN963794025555, and merchant 'Vertex Packaging LLP'."
+    },
+    {
+      "ledger_id": "LDG000113",
+      "gateway_ids": [
+        "GTW000118",
+        "GTW000119"
+      ],
+      "bank_ids": [
+        "BNK000114"
+      ],
+      "reasoning": "Matched by transaction ID TXN491913424446, merchant 'Agarwal Apparels Enterprises', and split gateway settlement amounts (53366.82 + 62546.46 = 115913.28 matching ledger amount)."
+    },
+    {
+      "ledger_id": "LDG000116",
+      "gateway_ids": [
+        "GTW000122",
+        "GTW000123",
+        "GTW000124"
+      ],
+      "bank_ids": [
+        "BNK000117"
+      ],
+      "reasoning": "Matched by transaction ID TXN131355445991, merchant 'Chawla Enterprises LLP', and split gateway settlement amounts (38702.75 + 16476.58 + 121391.12 = 176570.45 matching ledger amount)."
+    },
+    {
+      "ledger_id": "LDG000117",
+      "gateway_ids": [
+        "GTW000125",
+        "GTW000126",
+        "GTW000127"
+      ],
+      "bank_ids": [
+        "BNK000118"
+      ],
+      "reasoning": "Matched by transaction ID TXN189546484007, merchant 'Kapoor & Sons', and split gateway settlement amounts (15901.97 + 13587.39 + 5744.78 = 35234.14 matching ledger amount)."
+    },
+    {
+      "ledger_id": "LDG000118",
+      "gateway_ids": [
+        "GTW000128"
+      ],
+      "bank_ids": [
+        "BNK000119"
+      ],
+      "reasoning": "Matched by amount 56355.58, transaction ID TXN178380759187 (gateway/bank have hyphenated or truncated references 'TXN-1783-8075-9187' and '8380759187'), and merchant 'Chawla & Sons Pvt Ltd'."
+    },
+    {
+      "ledger_id": "LDG000119",
+      "gateway_ids": [
+        "GTW000129",
+        "GTW000130"
+      ],
+      "bank_ids": [
+        "BNK000120"
+      ],
+      "reasoning": "Matched by transaction ID TXN864678855519, amount 112550.51, and merchant 'Classic Foods & Sons'."
+    },
+    {
+      "ledger_id": "LDG000121",
+      "gateway_ids": [
+        "GTW000132",
+        "GTW000133",
+        "GTW000134"
+      ],
+      "bank_ids": [
+        "BNK000122"
+      ],
+      "reasoning": "Matched by transaction ID TXN880966873984, merchant 'Mehta Grocers Trading Co', and split gateway settlement amounts (86284.7 + 58205.65 + 47805.53 = 192295.88 matching ledger amount)."
+    },
+    {
+      "ledger_id": "LDG000122",
+      "gateway_ids": [
+        "GTW000135",
+        "GTW000136"
+      ],
+      "bank_ids": [
+        "BNK000123"
+      ],
+      "reasoning": "Matched by transaction ID TXN091494998388, merchant 'Pillai Commerce Pvt Ltd', and split gateway settlement amounts (30779.37 + 53815.85 = 84595.22 matching ledger amount)."
+    },
+    {
+      "ledger_id": "LDG000124",
+      "gateway_ids": [
+        "GTW000138"
+      ],
+      "bank_ids": [
+        "BNK000125"
+      ],
+      "reasoning": "Matched by amount 119525.67, transaction ID TXN771915064761 (gateway has hyphenated reference), and merchant 'Jai Electronics Enterprises' / 'Jai Electronic Enterp'."
+    },
+    {
+      "ledger_id": "LDG000125",
+      "gateway_ids": [
+        "GTW000139"
+      ],
+      "bank_ids": [
+        "BNK000126"
+      ],
+      "reasoning": "Matched by amount 110701.51 (bank has minor rounding difference to 110701.61), transaction ID TXN262672908826, and merchant 'Maa Foods Industries'."
+    },
+    {
+      "ledger_id": "LDG000126",
+      "gateway_ids": [
+        "GTW000140",
+        "GTW000141"
+      ],
+      "bank_ids": [
+        "BNK000127"
+      ],
+      "reasoning": "Matched by transaction ID TXN080333845149, amount 73996.4, and merchant 'Prime Handlooms Private Limited'."
+    },
+    {
+      "ledger_id": "LDG000128",
+      "gateway_ids": [
+        "GTW000143"
+      ],
+      "bank_ids": [],
+      "reasoning": "Matched by transaction ID TXN044637717719, amount 190906.33, and merchant 'Gupta Wellness Industries'."
+    },
+    {
+      "ledger_id": "LDG000130",
+      "gateway_ids": [
+        "GTW000145"
+      ],
+      "bank_ids": [
+        "BNK000130"
+      ],
+      "reasoning": "Matched by amount 223649.74, transaction ID TXN431985974347 (gateway/bank have truncated IDs '1985974347' and '431985974347'), and merchant 'Laxmi Steel Pvt Ltd'."
+    },
+    {
+      "ledger_id": "LDG000133",
+      "gateway_ids": [
+        "GTW000148"
+      ],
+      "bank_ids": [],
+      "reasoning": "Matched by transaction ID TXN484755635061, amount 243158.09, and merchant 'Gupta & Sons'."
+    },
+    {
+      "ledger_id": "LDG000134",
+      "gateway_ids": [],
+      "bank_ids": [
+        "BNK000133"
+      ],
+      "reasoning": "Matched by transaction ID TXN171143137448, amount 78934.28, and merchant 'Kulkarni Fintech Trading Co'."
+    },
+    {
+      "ledger_id": "LDG000135",
+      "gateway_ids": [
+        "GTW000149"
+      ],
+      "bank_ids": [],
+      "reasoning": "Matched by transaction ID TXN793028198550, amount 171642.81, and merchant 'Kapoor Mart & Sons'."
+    },
+    {
+      "ledger_id": "LDG000136",
+      "gateway_ids": [
+        "GTW000150"
+      ],
+      "bank_ids": [
+        "BNK000134"
+      ],
+      "reasoning": "Matched by transaction ID TXN528009419830, amount 35078.18, and merchant 'Maa Fashions Industries'."
+    },
+    {
+      "ledger_id": "LDG000137",
+      "gateway_ids": [
+        "GTW000151"
+      ],
+      "bank_ids": [
+        "BNK000135"
+      ],
+      "reasoning": "Matched by amount 231086.88 (gateway has minor rounding difference to 231087.78), transaction ID TXN392416664840, and merchant 'Chatterjee Timber Pvt Ltd'."
+    },
+    {
+      "ledger_id": "LDG000138",
+      "gateway_ids": [
+        "GTW000152"
+      ],
+      "bank_ids": [],
+      "reasoning": "Matched by transaction ID TXN549531328709, amount 50072.58, and merchant 'Shah Solutions Pvt Ltd'."
+    }
+  ],
+  "unresolved": []
+}
+```

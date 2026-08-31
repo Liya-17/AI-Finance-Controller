@@ -1,0 +1,182 @@
+{
+  "provider": "google_gemini",
+  "model": "gemini-3.5-flash-lite",
+  "scope_events": 76,
+  "elapsed_seconds": 24.12,
+  "input_tokens": 33988,
+  "output_tokens": 9787,
+  "estimated_cost_usd": 0.0,
+  "json_parse_method": "stripped_code_fence",
+  "total_claimed": 75,
+  "correct": 62,
+  "incorrect": 13,
+  "precision": 0.8266666666666667,
+  "incorrect_examples": [
+    {
+      "claimed": {
+        "ledger_id": "LDG000000",
+        "gateway_ids": [],
+        "bank_ids": [
+          "BNK000000"
+        ],
+        "reasoning": "Matched by exact transaction ID TXN040250165258, amount 159913.48, and merchant 'Shah & Co'."
+      },
+      "ledger_true_event": "EVT000000",
+      "ledger_true_scenario": "orphan"
+    },
+    {
+      "claimed": {
+        "ledger_id": "LDG000016",
+        "gateway_ids": [],
+        "bank_ids": [
+          "BNK000017"
+        ],
+        "reasoning": "Matched by transaction ID TXN304193882632, amount 6415.92, and merchant 'Bose & Co'."
+      },
+      "ledger_true_event": "EVT000016",
+      "ledger_true_scenario": "orphan"
+    },
+    {
+      "claimed": {
+        "ledger_id": "LDG000021",
+        "gateway_ids": [],
+        "bank_ids": [
+          "BNK000022"
+        ],
+        "reasoning": "Matched by transaction ID TXN028486959867, amount 215218.66, and merchant 'Shah & Co'."
+      },
+      "ledger_true_event": "EVT000021",
+      "ledger_true_scenario": "orphan"
+    },
+    {
+      "claimed": {
+        "ledger_id": "LDG000039",
+        "gateway_ids": [],
+        "bank_ids": [
+          "BNK000040"
+        ],
+        "reasoning": "Matched by transaction ID TXN568443739892, amount 85145.98, and merchant 'Sharma Brothers'."
+      },
+      "ledger_true_event": "EVT000039",
+      "ledger_true_scenario": "orphan"
+    },
+    {
+      "claimed": {
+        "ledger_id": "LDG000040",
+        "gateway_ids": [],
+        "bank_ids": [
+          "BNK000041"
+        ],
+        "reasoning": "Matched by transaction ID TXN919318090189, amount 193924.32, and merchant 'Pillai Handlooms Industries'."
+      },
+      "ledger_true_event": "EVT000040",
+      "ledger_true_scenario": "orphan"
+    },
+    {
+      "claimed": {
+        "ledger_id": "LDG000065",
+        "gateway_ids": [],
+        "bank_ids": [
+          "BNK000066"
+        ],
+        "reasoning": "Matched by transaction ID TXN423598812685, amount 112367.87, and merchant 'Pillai & Co'."
+      },
+      "ledger_true_event": "EVT000065",
+      "ledger_true_scenario": "orphan"
+    },
+    {
+      "claimed": {
+        "ledger_id": "LDG000067",
+        "gateway_ids": [],
+        "bank_ids": [
+          "BNK000068"
+        ],
+        "reasoning": "Matched by transaction ID TXN400285751230, amount 162621.35, and merchant 'Sri Fresh Foods Trading Co'."
+      },
+      "ledger_true_event": "EVT000067",
+      "ledger_true_scenario": "orphan"
+    },
+    {
+      "claimed": {
+        "ledger_id": "LDG000070",
+        "gateway_ids": [],
+        "bank_ids": [
+          "BNK000071"
+        ],
+        "reasoning": "Matched by transaction ID TXN833384062806, amount 158069.34, and merchant 'Sundar Rides Pvt Ltd'."
+      },
+      "ledger_true_event": "EVT000070",
+      "ledger_true_scenario": "orphan"
+    },
+    {
+      "claimed": {
+        "ledger_id": "LDG000128",
+        "gateway_ids": [
+          "GTW000143"
+        ],
+        "bank_ids": [],
+        "reasoning": "Matched by transaction ID TXN044637717719, amount 190906.33, and merchant 'Gupta Wellness Industries'."
+      },
+      "ledger_true_event": "EVT000128",
+      "ledger_true_scenario": "orphan"
+    },
+    {
+      "claimed": {
+        "ledger_id": "LDG000133",
+        "gateway_ids": [
+          "GTW000148"
+        ],
+        "bank_ids": [],
+        "reasoning": "Matched by transaction ID TXN484755635061, amount 243158.09, and merchant 'Gupta & Sons'."
+      },
+      "ledger_true_event": "EVT000133",
+      "ledger_true_scenario": "orphan"
+    },
+    {
+      "claimed": {
+        "ledger_id": "LDG000134",
+        "gateway_ids": [],
+        "bank_ids": [
+          "BNK000133"
+        ],
+        "reasoning": "Matched by transaction ID TXN171143137448, amount 78934.28, and merchant 'Kulkarni Fintech Trading Co'."
+      },
+      "ledger_true_event": "EVT000134",
+      "ledger_true_scenario": "orphan"
+    },
+    {
+      "claimed": {
+        "ledger_id": "LDG000135",
+        "gateway_ids": [
+          "GTW000149"
+        ],
+        "bank_ids": [],
+        "reasoning": "Matched by transaction ID TXN793028198550, amount 171642.81, and merchant 'Kapoor Mart & Sons'."
+      },
+      "ledger_true_event": "EVT000135",
+      "ledger_true_scenario": "orphan"
+    },
+    {
+      "claimed": {
+        "ledger_id": "LDG000138",
+        "gateway_ids": [
+          "GTW000152"
+        ],
+        "bank_ids": [],
+        "reasoning": "Matched by transaction ID TXN549531328709, amount 50072.58, and merchant 'Shah Solutions Pvt Ltd'."
+      },
+      "ledger_true_event": "EVT000138",
+      "ledger_true_scenario": "orphan"
+    }
+  ],
+  "matched_scenario_breakdown": {
+    "near_match_name": 12,
+    "id_truncated": 11,
+    "split_settlement": 11,
+    "rounding_drift": 11,
+    "duplicate": 9,
+    "timezone_shift": 8
+  },
+  "malformed_entries": 0,
+  "json_parse_failed": false
+}

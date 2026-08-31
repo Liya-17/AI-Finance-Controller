@@ -1,0 +1,35 @@
+{
+  "provider": "google_gemini",
+  "model": "gemini-3.5-flash-lite",
+  "total_adjudicated": 22,
+  "match_verdicts": 14,
+  "match_correct": 13,
+  "match_incorrect": 1,
+  "match_precision": 0.9285714285714286,
+  "match_incorrect_examples": [
+    {
+      "ledger_id": "LDG000062",
+      "claimed_gateway": null,
+      "claimed_bank": "BNK000063",
+      "true_event": "EVT000062",
+      "true_scenario": "duplicate",
+      "rationale": "The bank statement row matches the ledger by exact amount (97022.67), reference number (TXN627698351396), and matching date/merchant. However, there are two competing gateway candidates with the exact same transaction ID and amount, making the gateway side uncertain due to a system duplication; thus we match the bank side securely while leaving the gateway side null."
+    }
+  ],
+  "no_match_verdicts": 0,
+  "no_match_correct": 0,
+  "no_match_incorrect_missed_real_match": 0,
+  "uncertain_verdicts": 8,
+  "breakdown_by_scenario": {
+    "duplicate": {
+      "match": 1,
+      "no_match": 0,
+      "uncertain": 8
+    },
+    "orphan": {
+      "match": 13,
+      "no_match": 0,
+      "uncertain": 0
+    }
+  }
+}
