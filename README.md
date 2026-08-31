@@ -1,44 +1,73 @@
 # Multi-Source Reconciliation Agent
 
-A tiered reconciliation pipeline that matches transactions across three
-independent banking-ops sources — an internal core ledger, a payment
-gateway settlement file, and a bank statement — with injected realistic
-failure modes (truncated IDs, timezone-shifted dates, split settlements,
-rounding drift, duplicates, near-match merchant names, and genuine orphans),
-scored against a hidden ground truth.
+A tiered exact → fuzzy → LLM pipeline that reconciles transactions across
+ledger, payment-gateway, and bank sources — with measured, ground-truth-
+verified precision at every tier, not asserted accuracy.
+
+**🔴 Live dashboard: [PASTE_STREAMLIT_CLOUD_URL_HERE](PASTE_STREAMLIT_CLOUD_URL_HERE)**
+*(deploy via [`reports/deploy_instructions.md`](reports/deploy_instructions.md), then replace this line)*
+
+[![Tests](https://github.com/Liya-17/AI-Finance-Controller/actions/workflows/test.yml/badge.svg)](https://github.com/Liya-17/AI-Finance-Controller/actions/workflows/test.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+**👉 [Reviewing this? Read `JUDGE.md`](JUDGE.md)** — one page: the headline
+result, what to look at and why, and what this deliberately does not claim.
 
 Built for the Razorpay AI Buildathon, Track 04: AI Finance Controller.
 
-**Result:** 118/140 events fully reconciled (84.3%), 14/140 confirmed
-partial matches (10.0%), 8/140 correctly flagged as exceptions (5.7%) —
-100% precision measured at every tier. See
-[`reports/metrics_report.md`](reports/metrics_report.md) for the full
-numbers, the naive-vs-disciplined LLM comparison, and an honest account of
-what broke during the build. See [`architecture.md`](architecture.md) for
-the pipeline design and rationale.
+## The result, in three numbers
+
+| Bucket | Count | % of 140 | What it means |
+|---|---:|---:|---|
+| Full match (3-way) | 118 | 84.3% | Ledger + gateway + bank all reconciled |
+| Confirmed partial match | 14 | 10.0% | Correctly resolved to 2-of-3, by design — not a shortfall |
+| Flagged exception | 8 | 5.7% | Genuine ambiguity, correctly left for a human |
+
+100% precision measured at every tier, verified against a hidden ground
+truth the matchers never see. These three numbers are never summed into
+one ambiguous "resolved %" anywhere in this repo — see
+[`src/audit_log.py`](src/audit_log.py)'s module docstring for why.
+
+*(Dashboard screenshot goes here once captured — see `reports/deploy_instructions.md`.)*
+
+## The core argument: naive single-LLM-call vs. this tiered pipeline
+
+Not a hypothetical — [`llm_naive_experiment.py`](src/matchers/llm_naive_experiment.py)
+actually ran a single unstructured LLM call against the same 76-event pool
+the tiered pipeline (Tier 2 + Tier 3) handles, so this is apples-to-apples:
+
+| | Naive (one LLM call) | This pipeline (tiered) |
+|---|---|---|
+| Scope | All 76 Tier-1 leftovers, one call | Tier 2 resolves 54/76 algorithmically; Tier 3 only adjudicates the true ~22-event remainder |
+| Precision | **82.7%** (62/75 claimed matches correct) | **100%** at every tier |
+| Wrong matches | **13**, of which **9 force-matched orphan events** with confident, invented rationale | **0** measured false positives |
+| Time / cost | 24.1s, $0 (free tier) | ~0.5s (Tier 1+2, no LLM) + ~90s for 22 rate-limited Tier 3 calls, $0 |
+
+Full breakdown, raw output, and the "what broke" story behind these numbers:
+[`reports/metrics_report.md`](reports/metrics_report.md). Pipeline design
+rationale: [`architecture.md`](architecture.md).
 
 ## Reproduce in 30 seconds — no API key needed
 
 Every Tier 3 (LLM) decision from a real run is committed to this repo at
 [`reports/tier3_adjudication_results.json`](reports/tier3_adjudication_results.json).
-`src/pipeline.py` reuses that cache by default, so the entire pipeline —
-data generation, all three matching tiers, the audit log, and the test
-suite — reproduces the exact numbers above **with zero API calls and no
-`.env` file**. Verified by literally removing `.env` and re-running this:
+The pipeline reuses that cache by default, so the entire thing — Tier 1 and
+Tier 2 recomputed live and re-verified against `data/ground_truth.csv`,
+plus the three-bucket outcome — reproduces the numbers above **with zero
+API calls and no `.env` file**, in a few seconds:
 
 ```bash
 pip install -r requirements.txt
-python data/generate_synthetic_data.py --records 400 --injection-rate 0.55 --seed 42
-python src/pipeline.py
-pytest tests/ -v
+python scripts/print_verified_metrics.py
 ```
 
-Or, one command: `bash run_all.sh` (POSIX shell; on Windows, run it from
-Git Bash or activate the venv first — see Setup below).
+Or `make demo` (Linux/Mac) / `bash run_demo.sh` (Windows / no-make).
+Verified by literally removing `.env` and re-running the whole sequence —
+identical results.
 
-You only need `GEMINI_API_KEY` if you want to *re-run* Tier 3 against a
-live model (`python src/pipeline.py --rerun-tier3`) or replay the naive
-baseline experiment (`llm_naive_experiment.py`) — see Phase 4 below.
+You only need an API key (`GEMINI_API_KEY` by default — see "Provider-
+agnostic by design" below for other providers) if you want to *re-run*
+Tier 3 against a live model instead of the committed cache.
 
 ## Highlights: what broke
 
@@ -61,18 +90,15 @@ but the highlights:
   confirmation." Result: 5 of 13 orphans wrongly left unresolved. One
   prompt change (stating explicitly that a partial match is valid, not
   incomplete) fixed all 5.
-- The naive single-LLM-call baseline (`llm_naive_experiment.py`), run for
-  real against the same 76-event pool the tiered pipeline handles, scored
-  82.7% precision with 9 of 13 wrong matches force-matching orphan events
-  that genuinely have no counterpart — confident, plausible-sounding, and
-  false. This is the measured argument for the tiered design, not an
-  assumption.
 - Three LLM providers were evaluated before landing on one with usable
   credits — Anthropic and OpenAI both blocked on billing, a first Gemini
   key blocked at the project level. That trail turned into a real design
   decision: Tier 3 now runs behind a provider-agnostic adapter
-  ([`src/providers.py`](src/providers.py)), not a hardcoded SDK call. See
-  the Provider note below.
+  ([`src/providers.py`](src/providers.py)), not a hardcoded SDK call — see
+  below.
+
+See the naive-vs-tiered comparison table above for the third, and biggest,
+piece of "what broke" evidence.
 
 ## Provider note: provider-agnostic by design
 
@@ -207,13 +233,16 @@ python src/pipeline.py --rerun-tier3
 ### Phase 6 — dashboard
 
 ```bash
+pip install -r requirements-dashboard.txt   # or `make dashboard`
 streamlit run dashboard/app.py
 ```
 
 Opens at `http://localhost:8501`. Read-only view over
-`reports/audit_log.csv` and `reports/exception_queue.csv` — run
-`src/pipeline.py` first if those don't exist yet. No LLM calls happen from
-the dashboard itself.
+`reports/audit_log.csv` and `reports/exception_queue.csv` (both committed
+to this repo) — run `src/pipeline.py` first if you've regenerated data and
+want the dashboard to reflect it. No LLM calls happen from the dashboard
+itself, and it never imports `google-genai`/`anthropic`/`openai` — that's
+why it has its own lighter `requirements-dashboard.txt`.
 
 ### Phase 7 — reports
 
@@ -227,6 +256,7 @@ python src/pipeline.py
 ## Project structure
 
 ```
+JUDGE.md                        one-page reviewer guide — read this first
 data/
   generate_synthetic_data.py   Phase 1 — synthetic data + ground truth generator
   core_ledger.csv               generated
@@ -239,24 +269,36 @@ src/
     fuzzy_matcher.py             Phase 3 — Tier 2
     llm_naive_experiment.py     Phase 4 Step A — naive baseline (the "what broke" experiment)
     llm_adjudicator.py           Phase 4 Step B — Tier 3, disciplined
+  providers.py                  LLM provider adapter (Gemini/Anthropic/OpenAI, one interface)
   audit_log.py                  Phase 5 — three-bucket audit trail
   exceptions.py                  Phase 5 — exception categorization
   pipeline.py                    end-to-end runner (Tier 1 -> 2 -> 3 -> audit -> exceptions)
 dashboard/
-  app.py                         Phase 6 — Streamlit dashboard
+  app.py                         Phase 6 — Streamlit dashboard (needs only requirements-dashboard.txt)
+scripts/
+  print_verified_metrics.py     the `make demo` / `run_demo.sh` entry point
+tests/                          pytest suite, no live LLM calls (see .github/workflows/test.yml)
 reports/
   metrics_report.md              Phase 7 — precision/recall, throughput, honest exception summary
   llm_provider_blockers.md       the 3-provider billing-wall trail
+  deploy_instructions.md         Streamlit Community Cloud deploy steps
   audit_log.csv / .json          generated
   exception_queue.csv / .json    generated
   naive_llm_*                     generated (Step A raw output + summary)
   tier3_adjudication_*            generated (Step B results + summary)
 architecture.md                  pipeline diagram + design rationale
-requirements.txt
+requirements.txt                 full project (matchers, tests, all 3 LLM SDKs)
+requirements-dashboard.txt      dashboard-only subset (pandas/streamlit/plotly) — Streamlit Cloud deploy uses this
+Makefile / run_demo.sh          `make demo` and its Windows/no-make fallback
+run_all.sh                       longer reproduce path (regenerates data too, runs pytest)
+.github/workflows/test.yml      CI — runs the test suite on every push
+LICENSE                          MIT
 .gitignore
 ```
 
 ## Tech stack
 
-Python, pandas, rapidfuzz, Faker, Streamlit, Google Gemini API
-(`google-genai`).
+Python, pandas, rapidfuzz, Faker, Streamlit, Plotly. LLM: Google Gemini
+(`google-genai`, verified) behind a provider-agnostic adapter that also
+supports Anthropic and OpenAI SDKs (written, unverified — see "Provider-
+agnostic by design" above).

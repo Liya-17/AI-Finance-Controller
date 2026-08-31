@@ -1,3 +1,8 @@
+# Full project (matchers, tests, LLM SDKs). For the dashboard alone
+# (Streamlit Cloud deploy, or `make dashboard`), use requirements-dashboard.txt
+# instead - it's a strict subset (pandas/streamlit/plotly only) and does not
+# import google-genai/Faker/pytest, which would slow deploys and imply the
+# dashboard calls an LLM. It does not.
 pandas==3.0.5
 Faker==40.37.0
 rapidfuzz==3.14.6
