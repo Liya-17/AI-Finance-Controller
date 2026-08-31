@@ -17,6 +17,37 @@ numbers, the naive-vs-disciplined LLM comparison, and an honest account of
 what broke during the build. See [`architecture.md`](architecture.md) for
 the pipeline design and rationale.
 
+## Highlights: what broke
+
+The full account is in
+[`reports/metrics_report.md`](reports/metrics_report.md#what-broke-and-how-it-was-fixed-the-honest-account),
+but the highlights:
+
+- **A self-reported "100% precision" that was actually a false positive
+  leak.** Tier 2's first version let all 9 `duplicate`-scenario events
+  (two raw-identical candidate rows) leak through as confident matches,
+  because the ambiguous-tie guard that already protected Tier 1 hadn't
+  been carried into Tier 2's greedy scorer — the tool's own printed
+  precision number looked perfect right up until it was checked against
+  ground truth.
+- **A "correct" prompt that quietly taught the model to under-resolve.**
+  Tier 3's adjudicator initially never told the model that a one-sided
+  (2-of-3) match is a *complete* answer for orphan-shaped rows — so it
+  kept finding the true counterpart and then declining to call it a match,
+  reasoning that "complete reconciliation requires both gateway and bank
+  confirmation." Result: 5 of 13 orphans wrongly left unresolved. One
+  prompt change (stating explicitly that a partial match is valid, not
+  incomplete) fixed all 5.
+- The naive single-LLM-call baseline (`llm_naive_experiment.py`), run for
+  real against the same 76-event pool the tiered pipeline handles, scored
+  82.7% precision with 9 of 13 wrong matches force-matching orphan events
+  that genuinely have no counterpart — confident, plausible-sounding, and
+  false. This is the measured argument for the tiered design, not an
+  assumption.
+- Three LLM providers were evaluated before landing on one with usable
+  credits — Anthropic and OpenAI both blocked on billing, a first Gemini
+  key blocked at the project level. See the Provider note below.
+
 ## Provider note
 
 The brief specified the Anthropic API (`claude-sonnet-4-6`). This build

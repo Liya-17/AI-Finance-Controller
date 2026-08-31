@@ -2,6 +2,18 @@
 
 ## Pipeline overview
 
+Three independent source files — an internal core ledger, a payment
+gateway settlement file, and a bank statement — go through three matching
+tiers in increasing order of cost and judgment required. Each tier only
+sees what the previous tier couldn't resolve, so the pipeline spends the
+cheapest, most reliable method (a raw equality check) first, and reserves
+the most expensive, least deterministic method (an LLM call) for the small
+remainder that genuinely needs judgment. Every decision at every tier is
+logged by `audit_log.py` into one of three outcome buckets, anything left
+ambiguous is categorized by `exceptions.py`, and the whole result is
+browsable in the Streamlit dashboard. `pipeline.py` runs all of this
+end to end.
+
 ```
                  ┌─────────────────┐
                  │  data/generate_  │
