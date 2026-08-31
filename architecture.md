@@ -149,15 +149,30 @@ for orphan-shaped rows, not an incomplete attempt), and `flagged_exception`
 `reports/metrics_report.md` for why that distinction is load-bearing for
 honest reporting, not a formality.
 
-## Provider note
+## Provider note: provider-agnostic by design
 
 The brief specified the Anthropic API (`claude-sonnet-4-6`). Three
 providers were evaluated in sequence — Anthropic, OpenAI, and Google
 Gemini — with the first two blocked on account credits and a first Gemini
 key blocked at the project level; a second Gemini key worked on the free
-tier. Google Gemini (`gemini-3.5-flash-lite`) is the deliberate model this
-pipeline runs Tier 3 against for this submission. Full trail of raw errors:
-`reports/llm_provider_blockers.md`. The adjudication design (structured
-JSON schema, one-call-per-row, the abstention-friendly prompt) is
-provider-agnostic — swapping back to Claude is a model-name and SDK-call
-change in `src/matchers/llm_adjudicator.py`, not a redesign.
+tier. Full trail of raw errors: `reports/llm_provider_blockers.md`.
+
+Rather than leave that as a one-off SDK swap, Tier 3 (`llm_adjudicator.py`)
+now calls the LLM only through `src/providers.py` - one `LLMProvider`
+interface (`generate_structured(system_instruction, user_prompt,
+json_schema) -> (parsed, raw_text)`), three backends (`GeminiProvider`,
+`AnthropicProvider`, `OpenAIProvider`), selected at runtime by the
+`LLM_PROVIDER` env var. `llm_adjudicator.py` never imports a provider SDK
+directly; `RESPONSE_SCHEMA` is written in standard JSON Schema, and the one
+real provider-specific quirk found along the way - Gemini's schema dialect
+rejects `"type": ["string", "null"]`, wanting `nullable: true` instead - is
+translated inside `GeminiProvider` alone, not leaked into the shared
+schema.
+
+`GeminiProvider` is fully verified (it produced every real result in this
+repo, including the committed `reports/tier3_adjudication_results.json`).
+`AnthropicProvider` and `OpenAIProvider` are written to each SDK's real
+structured-output shape but unverified against a live account - both were
+blocked on billing for the whole build. `LLM_PROVIDER=anthropic python
+src/pipeline.py --rerun-tier3` is the entire diff needed to try Claude for
+real, if credits become available.

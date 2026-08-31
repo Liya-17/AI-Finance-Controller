@@ -15,6 +15,20 @@ design and the naive-vs-disciplined comparison are provider-agnostic; only
 the SDK call changed. This three-provider trail IS the "what broke" story
 for this phase - see reports/metrics_report.md.
 
+Scope note: unlike llm_adjudicator.py (Tier 3's production path, which
+goes through src/providers.py and is genuinely provider-agnostic - swap
+LLM_PROVIDER, same code runs), this script calls the Gemini SDK directly
+and stays that way deliberately. It's a one-time measurement artifact, not
+production code: its whole value is the specific instrumentation it reports
+(response.usage_metadata token counts, finish_reason), which the shared
+LLMProvider interface intentionally doesn't expose (llm_adjudicator.py
+doesn't need it, and adding it there for this script's sake would bloat
+every provider's implementation for one consumer). The historical run this
+script already produced is committed at reports/naive_llm_raw_response.txt
+and reports/naive_llm_experiment_summary.json - re-running it against a
+different provider was not asked for and would require re-adding
+provider-specific usage-metadata handling per provider, not a small change.
+
 This script is the "what broke" experiment itself, not production code. It
 answers one question honestly: what happens if we skip the tiered design
 entirely and just ask an LLM to resolve everything Tier 1 couldn't?

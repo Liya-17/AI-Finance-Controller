@@ -5,16 +5,22 @@ Provider note: the brief originally specified the Anthropic API
 (claude-sonnet-4-6). Getting there required three provider attempts -
 Anthropic (no usable credits), OpenAI (no usable credits), and Google
 Gemini (first key blocked at the project level, second key worked) - see
-reports/llm_provider_blockers.md for the full trail of raw errors. Google
-Gemini (gemini-3.5-flash-lite, GEMINI_API_KEY, free tier) is the model this
-project runs Tier 3 against. The tiered design and adjudication methodology
-are provider-agnostic: swapping the model back to claude-sonnet-4-6 is a
-model-name and SDK-call change, not a redesign - see
-adjudicate_one()/RESPONSE_SCHEMA/SYSTEM_INSTRUCTION below, which carry
-directly. The free-tier rate limit (15 req/min, see
-FREE_TIER_REQUESTS_PER_MINUTE) is an accepted, documented constraint of
-this choice, not an oversight - see reports/metrics_report.md for the
-throughput tradeoff this implies.
+reports/llm_provider_blockers.md for the full trail of raw errors.
+
+This module calls the LLM only through src/providers.py's LLMProvider
+interface - it never imports a provider SDK directly. The default
+(LLM_PROVIDER unset or "gemini") runs gemini-3.5-flash-lite, verified by
+every real result in this repo including the committed
+reports/tier3_adjudication_results.json. AnthropicProvider and
+OpenAIProvider exist behind the same interface, written to each SDK's real
+structured-output shape, but are unverified - both accounts were blocked on
+billing for the whole build. Trying claude-sonnet-4-6 for real is
+`LLM_PROVIDER=anthropic python src/pipeline.py --rerun-tier3` - no code
+change needed. See src/providers.py's module docstring for the full
+verification-status breakdown. The free-tier rate limit (15 req/min, see
+FREE_TIER_REQUESTS_PER_MINUTE) is a documented constraint of the Gemini
+default specifically, not a property of the interface - see
+reports/metrics_report.md for the throughput tradeoff this implies.
 
 WHAT THIS TIER IS FOR (and what it deliberately is NOT for)
 -------------------------------------------------------------
@@ -73,7 +79,9 @@ from exact_matcher import load_sources, run_exact_match
 from fuzzy_matcher import run_tier2
 
 DATA_DIR = Path(__file__).resolve().parents[2] / "data"
-ADJUDICATOR_MODEL = "gemini-3.5-flash-lite"  # substituted for claude-sonnet-4-6 - see module docstring
+# Model is selected by providers.get_provider() (LLM_PROVIDER / LLM_MODEL
+# env vars, default "gemini" / gemini-3.5-flash-lite - see src/providers.py
+# for why, and reports/llm_provider_blockers.md for the provider trail).
 
 RESPONSE_SCHEMA = {
     "type": "object",
@@ -91,15 +99,13 @@ RESPONSE_SCHEMA = {
                             "uncertain = insufficient evidence either way; do not guess.",
         },
         "matched_gateway_id": {
-            "type": "string",
-            "nullable": True,
+            "type": ["string", "null"],
             "description": "gateway_id of the matched row, or null if there is no true gateway "
                             "counterpart for this ledger row (this is a normal, valid outcome, not a "
                             "failure - see is_partial_match). Only set when verdict is 'match'.",
         },
         "matched_bank_id": {
-            "type": "string",
-            "nullable": True,
+            "type": ["string", "null"],
             "description": "bank_id of the matched row, or null if there is no true bank counterpart "
                             "for this ledger row (normal, valid outcome). Only set when verdict is 'match'.",
         },
@@ -168,23 +174,25 @@ class AdjudicationResult:
     candidates_considered: dict = field(default_factory=dict)
 
 
-def require_api_key() -> str:
-    """Fail loudly if the key is missing - see llm_naive_experiment.py for
-    the same discipline and why it matters here."""
+def require_api_key():
+    """
+    Fail loudly if the configured provider's key is missing - never
+    silently skip the LLM step or fall back to a mocked response. Returns
+    a providers.LLMProvider instance ready to call. Provider is selected
+    by LLM_PROVIDER (default "gemini") - see src/providers.py.
+    """
     load_dotenv()
-    api_key = os.environ.get("GEMINI_API_KEY")
-    if not api_key:
-        print(
-            "\nFATAL: GEMINI_API_KEY is not set.\n"
-            "Tier 3 calls the real Google Gemini API - it will not run with "
-            "a mocked or simulated response.\n\n"
-            "Fix: create a .env file in the project root containing:\n"
-            "  GEMINI_API_KEY=...\n"
-            "(.env is already in .gitignore - never commit the key.)\n",
-            file=sys.stderr,
-        )
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+    from providers import get_provider
+
+    try:
+        return get_provider()
+    except RuntimeError as e:
+        print(f"\nFATAL: {e}\n"
+              f"Tier 3 calls the real LLM API - it will not run with a mocked or simulated "
+              f"response.\n(.env is already in .gitignore - never commit a key.)\n",
+              file=sys.stderr)
         sys.exit(1)
-    return api_key
 
 
 def build_candidate_pool(ledger_row, gateway_pool: pd.DataFrame, bank_pool: pd.DataFrame, amount_window: float = 500.0):
@@ -206,9 +214,8 @@ def build_candidate_pool(ledger_row, gateway_pool: pd.DataFrame, bank_pool: pd.D
     return gw_candidates, bk_candidates
 
 
-def adjudicate_one(client, ledger_row, gw_candidates, bk_candidates) -> AdjudicationResult:
-    from google.genai import types
-
+def adjudicate_one(provider, ledger_row, gw_candidates, bk_candidates) -> AdjudicationResult:
+    """provider: a providers.LLMProvider instance (see get_provider())."""
     prompt = f"""LEDGER RECORD (needs a decision):
 {json.dumps(ledger_row, indent=2, default=str)}
 
@@ -220,18 +227,7 @@ CANDIDATE BANK STATEMENT RECORDS ({len(bk_candidates)} in range):
 
 Adjudicate this ledger record: is there a true match among the candidates, or not?"""
 
-    response = client.models.generate_content(
-        model=ADJUDICATOR_MODEL,
-        contents=prompt,
-        config=types.GenerateContentConfig(
-            system_instruction=SYSTEM_INSTRUCTION,
-            response_mime_type="application/json",
-            response_schema=RESPONSE_SCHEMA,
-            temperature=0.0,
-        ),
-    )
-
-    parsed = json.loads(response.text)
+    parsed, _raw_text = provider.generate_structured(SYSTEM_INSTRUCTION, prompt, RESPONSE_SCHEMA)
     return AdjudicationResult(
         ledger_id=ledger_row["ledger_id"],
         verdict=parsed["verdict"],
@@ -251,36 +247,63 @@ SECONDS_PER_REQUEST = 60.0 / FREE_TIER_REQUESTS_PER_MINUTE
 MAX_RETRIES_PER_ROW = 3
 
 
+def _is_rate_limit_error(exc: Exception) -> bool:
+    """Provider-agnostic 429 detection: checks the exception's own status
+    code attribute where the SDK exposes one (Gemini's ClientError,
+    Anthropic's RateLimitError, OpenAI's RateLimitError all do), falling
+    back to string-matching common markers. Kept generic rather than
+    importing one provider's exception class, since this function runs
+    under whichever LLM_PROVIDER is active."""
+    status = getattr(exc, "status_code", None) or getattr(exc, "code", None)
+    if status == 429:
+        return True
+    text = str(exc)
+    return "RESOURCE_EXHAUSTED" in text or "rate_limit" in text.lower() or "429" in text
+
+
+def _extract_retry_delay_seconds(exc: Exception, default: int = 15) -> int:
+    """Best-effort extraction of a provider-reported retry delay (Gemini
+    includes retryDelay in its 429 body); other providers' SDKs expose
+    this via a retry_after attribute or a Retry-After header where
+    available. Falls back to `default` if nothing is found."""
+    import re
+
+    retry_after = getattr(exc, "retry_after", None)
+    if retry_after:
+        return int(retry_after) + 2
+    match = re.search(r"retryDelay['\"]?:\s*['\"]?(\d+)", str(exc))
+    return int(match.group(1)) + 2 if match else default
+
+
 def _call_with_retry(fn, *args, **kwargs):
     """Retry on 429 (rate limit) with the delay the API itself reports,
     plus a small buffer - the free tier's 15 req/min limit is a hard
     external constraint, not a bug, so backing off and retrying is the
     correct behavior rather than failing the whole run."""
-    import re
-    from google.genai import errors as genai_errors
-
     for attempt in range(MAX_RETRIES_PER_ROW):
         try:
             return fn(*args, **kwargs)
-        except genai_errors.ClientError as e:
-            if "RESOURCE_EXHAUSTED" not in str(e) or attempt == MAX_RETRIES_PER_ROW - 1:
+        except Exception as e:
+            if not _is_rate_limit_error(e) or attempt == MAX_RETRIES_PER_ROW - 1:
                 raise
-            match = re.search(r"retryDelay['\"]?:\s*['\"]?(\d+)", str(e))
-            delay = int(match.group(1)) + 2 if match else 15
+            delay = _extract_retry_delay_seconds(e)
             print(f"  Rate limited, retrying in {delay}s (attempt {attempt+1}/{MAX_RETRIES_PER_ROW})...")
             time.sleep(delay)
 
 
-def run_tier3(unmatched_ledger: pd.DataFrame, unmatched_gateway: pd.DataFrame, unmatched_bank: pd.DataFrame, api_key: str):
-    from google import genai
-
-    client = genai.Client(api_key=api_key)
+def run_tier3(unmatched_ledger: pd.DataFrame, unmatched_gateway: pd.DataFrame, unmatched_bank: pd.DataFrame, provider=None):
+    """provider: a providers.LLMProvider instance. If None, constructed via
+    providers.get_provider() (reads LLM_PROVIDER/LLM_MODEL from the
+    environment, default "gemini")."""
+    if provider is None:
+        from providers import get_provider
+        provider = get_provider()
 
     results = []
     for i, (_, lrow) in enumerate(unmatched_ledger.iterrows()):
         ledger_dict = lrow.to_dict()
         gw_candidates, bk_candidates = build_candidate_pool(ledger_dict, unmatched_gateway, unmatched_bank)
-        result = _call_with_retry(adjudicate_one, client, ledger_dict, gw_candidates, bk_candidates)
+        result = _call_with_retry(adjudicate_one, provider, ledger_dict, gw_candidates, bk_candidates)
         results.append(result)
         print(f"  [{i+1}/{len(unmatched_ledger)}] {result.ledger_id}: {result.verdict}")
         if i < len(unmatched_ledger) - 1:
@@ -412,7 +435,7 @@ def verify_against_ground_truth(results: list, ground_truth_path: Path = DATA_DI
 
 
 def main():
-    api_key = require_api_key()
+    provider = require_api_key()
 
     ledger, gateway, bank = load_sources()
     tier1 = run_exact_match(ledger, gateway, bank)
@@ -423,10 +446,10 @@ def main():
     n_ledger = len(combined.unmatched_ledger)
     print(f"Tier 3 scope: {n_ledger} ledger rows remain after Tier 1 ({len(tier1.matches)} resolved) "
           f"and Tier 2 ({len(combined.matches)} resolved).\n")
-    print(f"Adjudicating each of the {n_ledger} rows individually via {ADJUDICATOR_MODEL} "
-          f"with structured JSON output...\n")
+    print(f"Adjudicating each of the {n_ledger} rows individually via "
+          f"{provider.__class__.__name__} ({provider.model}) with structured JSON output...\n")
 
-    results = run_tier3(combined.unmatched_ledger, combined.unmatched_gateway, combined.unmatched_bank, api_key)
+    results = run_tier3(combined.unmatched_ledger, combined.unmatched_gateway, combined.unmatched_bank, provider)
 
     verdict_counts = pd.Series([r.verdict for r in results]).value_counts().to_dict()
     print(f"Verdicts: {verdict_counts}")
@@ -454,7 +477,11 @@ def main():
         json.dumps([vars(r) for r in results], indent=2, default=str), encoding="utf-8"
     )
     summary_path = log_dir / "tier3_adjudication_summary.json"
-    summary_path.write_text(json.dumps({"provider": "google_gemini", "model": ADJUDICATOR_MODEL, **report}, indent=2, default=str), encoding="utf-8")
+    summary_path.write_text(
+        json.dumps({"provider": provider.__class__.__name__, "model": provider.model, **report},
+                   indent=2, default=str),
+        encoding="utf-8",
+    )
     print(f"\nResults saved to: {results_path}")
     print(f"Summary saved to: {summary_path}")
 

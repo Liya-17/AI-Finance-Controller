@@ -17,6 +17,29 @@ numbers, the naive-vs-disciplined LLM comparison, and an honest account of
 what broke during the build. See [`architecture.md`](architecture.md) for
 the pipeline design and rationale.
 
+## Reproduce in 30 seconds — no API key needed
+
+Every Tier 3 (LLM) decision from a real run is committed to this repo at
+[`reports/tier3_adjudication_results.json`](reports/tier3_adjudication_results.json).
+`src/pipeline.py` reuses that cache by default, so the entire pipeline —
+data generation, all three matching tiers, the audit log, and the test
+suite — reproduces the exact numbers above **with zero API calls and no
+`.env` file**. Verified by literally removing `.env` and re-running this:
+
+```bash
+pip install -r requirements.txt
+python data/generate_synthetic_data.py --records 400 --injection-rate 0.55 --seed 42
+python src/pipeline.py
+pytest tests/ -v
+```
+
+Or, one command: `bash run_all.sh` (POSIX shell; on Windows, run it from
+Git Bash or activate the venv first — see Setup below).
+
+You only need `GEMINI_API_KEY` if you want to *re-run* Tier 3 against a
+live model (`python src/pipeline.py --rerun-tier3`) or replay the naive
+baseline experiment (`llm_naive_experiment.py`) — see Phase 4 below.
+
 ## Highlights: what broke
 
 The full account is in
@@ -46,16 +69,42 @@ but the highlights:
   assumption.
 - Three LLM providers were evaluated before landing on one with usable
   credits — Anthropic and OpenAI both blocked on billing, a first Gemini
-  key blocked at the project level. See the Provider note below.
+  key blocked at the project level. That trail turned into a real design
+  decision: Tier 3 now runs behind a provider-agnostic adapter
+  ([`src/providers.py`](src/providers.py)), not a hardcoded SDK call. See
+  the Provider note below.
 
-## Provider note
+## Provider note: provider-agnostic by design
 
-The brief specified the Anthropic API (`claude-sonnet-4-6`). This build
-runs Tier 3 against **Google Gemini** (`gemini-3.5-flash-lite`) instead,
-after Anthropic and OpenAI accounts both had no usable credits — see
-[`reports/llm_provider_blockers.md`](reports/llm_provider_blockers.md) for
-the full trail. This is the deliberate choice for this submission, not an
-unresolved placeholder.
+Tier 3 goes through one interface — [`src/providers.py`](src/providers.py)
+— with three backends (Gemini, Anthropic, OpenAI) behind it, selected by
+`LLM_PROVIDER`:
+
+```bash
+LLM_PROVIDER=gemini python src/pipeline.py --rerun-tier3      # default, verified
+LLM_PROVIDER=anthropic python src/pipeline.py --rerun-tier3   # claude-sonnet-4-6
+LLM_PROVIDER=openai python src/pipeline.py --rerun-tier3      # gpt-4o-mini
+```
+
+This is demonstrable, not just asserted: `llm_adjudicator.py` never imports
+a provider SDK directly, and the response schema
+(`llm_adjudicator.RESPONSE_SCHEMA`) is written in standard JSON Schema, with
+Gemini-dialect translation (`nullable: true` vs. `"type": ["string",
+"null"]`) isolated inside `GeminiProvider` — a real incompatibility found
+and handled, not glossed over.
+
+**Verification status, stated precisely:** `GeminiProvider` is fully
+verified — it's what every real run in this repo, including the committed
+`reports/tier3_adjudication_results.json`, actually used.
+`AnthropicProvider` and `OpenAIProvider` are written to each SDK's
+documented structured-output shape but have not been run against a live
+account — both were blocked on billing for the entire build (the brief
+specified `claude-sonnet-4-6`; Anthropic and OpenAI credits ran out before
+either could be tested). Full trail of the raw errors:
+[`reports/llm_provider_blockers.md`](reports/llm_provider_blockers.md). If
+you have Anthropic or OpenAI credits, running Tier 3 against the originally
+specified model is the one command above — no other code change needed —
+and confirming it works would remove this caveat entirely.
 
 ## Setup
 
@@ -69,16 +118,19 @@ source myenv/bin/activate
 pip install -r requirements.txt
 ```
 
-Create a `.env` file in the project root (never commit this — it's already
-in `.gitignore`):
+**Optional — only needed to re-run Tier 3 live instead of using the
+committed cache** (see "Reproduce in 30 seconds" above for the no-key
+path). Create a `.env` file in the project root (never commit this — it's
+already in `.gitignore`):
 
 ```
 GEMINI_API_KEY=your-key-here
 ```
 
 Get a free-tier key at [aistudio.google.com](https://aistudio.google.com/apikey).
-Phase 4/5/6/7 fail loudly with a clear error message if this is missing —
-they never silently skip the LLM step or fall back to a mocked response.
+`llm_adjudicator.py` and `llm_naive_experiment.py` fail loudly with a clear
+error message if this is missing and you try to call the live API — they
+never silently skip the LLM step or fall back to a mocked response.
 
 ## Running the pipeline
 

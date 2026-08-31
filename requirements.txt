@@ -4,5 +4,7 @@ rapidfuzz==3.14.6
 streamlit==1.62.0
 plotly==7.0.0
 google-genai==2.20.0
+anthropic==1.2.0
+openai==3.6.0
 python-dotenv==1.2.3
 pytest==9.1.1

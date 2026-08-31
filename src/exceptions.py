@@ -155,7 +155,7 @@ def main():
     sys.path.insert(0, str(Path(__file__).resolve().parent / "matchers"))
     from exact_matcher import load_sources, run_exact_match
     from fuzzy_matcher import run_tier2
-    from llm_adjudicator import AdjudicationResult, ADJUDICATOR_MODEL
+    from llm_adjudicator import AdjudicationResult
 
     results_path = REPORTS_DIR / "tier3_adjudication_results.json"
     if not results_path.exists():

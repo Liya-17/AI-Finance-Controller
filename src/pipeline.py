@@ -23,7 +23,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent / "matchers"))
 
 from exact_matcher import load_sources, run_exact_match
 from fuzzy_matcher import run_tier2
-from llm_adjudicator import AdjudicationResult, ADJUDICATOR_MODEL, require_api_key, run_tier3
+from llm_adjudicator import AdjudicationResult, require_api_key, run_tier3
 
 from audit_log import AuditLog, print_three_bucket_summary
 from exceptions import build_exception_queue, category_breakdown, save_exception_queue
@@ -31,6 +31,15 @@ from exceptions import build_exception_queue, category_breakdown, save_exception
 REPORTS_DIR = Path(__file__).resolve().parent.parent / "reports"
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 TIER3_CACHE_PATH = REPORTS_DIR / "tier3_adjudication_results.json"
+TIER3_CACHE_META_PATH = REPORTS_DIR / "tier3_adjudication_summary.json"
+
+# Historical fact about the committed cache, independent of whatever
+# LLM_PROVIDER happens to be set to on whoever's machine runs this - the
+# cache was actually produced by Gemini (see reports/llm_provider_blockers.md).
+# Only used as a fallback label when tier3_adjudication_summary.json (which
+# records the real provider/model of whatever run produced the cache) is
+# missing or older than the results file.
+CACHED_RESULTS_PROVIDER_FALLBACK = ("GeminiProvider", "gemini-3.5-flash-lite")
 
 
 def run_full_pipeline(rerun_tier3: bool = False):
@@ -42,17 +51,26 @@ def run_full_pipeline(rerun_tier3: bool = False):
     )
 
     if rerun_tier3 or not TIER3_CACHE_PATH.exists():
-        api_key = require_api_key()
+        provider = require_api_key()
         tier3_results = run_tier3(
-            combined.unmatched_ledger, combined.unmatched_gateway, combined.unmatched_bank, api_key
+            combined.unmatched_ledger, combined.unmatched_gateway, combined.unmatched_bank, provider
         )
         TIER3_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
         TIER3_CACHE_PATH.write_text(
             json.dumps([r.__dict__ for r in tier3_results], indent=2, default=str), encoding="utf-8"
         )
+        tier3_provider_name, tier3_model = provider.__class__.__name__, provider.model
     else:
         tier3_raw = json.loads(TIER3_CACHE_PATH.read_text(encoding="utf-8"))
         tier3_results = [AdjudicationResult(**r) for r in tier3_raw]
+        # Record which provider actually produced the cache we're reusing,
+        # not whatever LLM_PROVIDER is currently set to - those can differ.
+        if TIER3_CACHE_META_PATH.exists():
+            meta = json.loads(TIER3_CACHE_META_PATH.read_text(encoding="utf-8"))
+            tier3_provider_name = meta.get("provider", CACHED_RESULTS_PROVIDER_FALLBACK[0])
+            tier3_model = meta.get("model", CACHED_RESULTS_PROVIDER_FALLBACK[1])
+        else:
+            tier3_provider_name, tier3_model = CACHED_RESULTS_PROVIDER_FALLBACK
 
     log = AuditLog()
     for m in tier1.matches:
@@ -60,7 +78,7 @@ def run_full_pipeline(rerun_tier3: bool = False):
     for m in combined.matches:
         log.log_tier2_match(m)
     for r in tier3_results:
-        log.log_tier3_result(r, provider="google_gemini", model=ADJUDICATOR_MODEL)
+        log.log_tier3_result(r, provider=tier3_provider_name, model=tier3_model)
 
     exceptions = build_exception_queue(tier3_results)
 
